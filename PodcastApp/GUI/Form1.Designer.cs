@@ -1,4 +1,6 @@
-﻿namespace GUI
+﻿using System;
+
+namespace GUI
 {
     partial class Form1
     {
@@ -34,11 +36,11 @@
             this.btnSpara1 = new System.Windows.Forms.Button();
             this.btnTaBort1 = new System.Windows.Forms.Button();
             this.cboUppdateringsfrekverns = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cboKategori = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblUppdateringsfrekvens = new System.Windows.Forms.Label();
+            this.lblKategori = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -83,7 +85,7 @@
             // 
             // btnTaBort1
             // 
-            this.btnTaBort1.Location = new System.Drawing.Point(384, 303);
+            this.btnTaBort1.Location = new System.Drawing.Point(404, 303);
             this.btnTaBort1.Name = "btnTaBort1";
             this.btnTaBort1.Size = new System.Drawing.Size(121, 35);
             this.btnTaBort1.TabIndex = 4;
@@ -98,14 +100,14 @@
             this.cboUppdateringsfrekverns.Size = new System.Drawing.Size(121, 28);
             this.cboUppdateringsfrekverns.TabIndex = 6;
             // 
-            // comboBox3
+            // cboKategori
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(384, 269);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 28);
-            this.comboBox3.TabIndex = 7;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.cboKategori.FormattingEnabled = true;
+            this.cboKategori.Location = new System.Drawing.Point(404, 262);
+            this.cboKategori.Name = "cboKategori";
+            this.cboKategori.Size = new System.Drawing.Size(121, 28);
+            this.cboKategori.TabIndex = 7;
+            this.cboKategori.SelectedIndexChanged += new System.EventHandler(this.cboKategori_SelectedIndexChanged);
             // 
             // textBox1
             // 
@@ -125,23 +127,23 @@
             this.label2.TabIndex = 9;
             this.label2.Text = ":URL";
             // 
-            // label3
+            // lblUppdateringsfrekvens
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(257, 239);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 20);
-            this.label3.TabIndex = 10;
-            this.label3.Text = ":Uppdateringsfrekvens";
+            this.lblUppdateringsfrekvens.AutoSize = true;
+            this.lblUppdateringsfrekvens.Location = new System.Drawing.Point(257, 239);
+            this.lblUppdateringsfrekvens.Name = "lblUppdateringsfrekvens";
+            this.lblUppdateringsfrekvens.Size = new System.Drawing.Size(169, 20);
+            this.lblUppdateringsfrekvens.TabIndex = 10;
+            this.lblUppdateringsfrekvens.Text = ":Uppdateringsfrekvens";
             // 
-            // label4
+            // lblKategori
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(406, 239);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "label4";
+            this.lblKategori.AutoSize = true;
+            this.lblKategori.Location = new System.Drawing.Point(432, 239);
+            this.lblKategori.Name = "lblKategori";
+            this.lblKategori.Size = new System.Drawing.Size(72, 20);
+            this.lblKategori.TabIndex = 11;
+            this.lblKategori.Text = ":Kategori";
             // 
             // Form1
             // 
@@ -149,11 +151,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1173, 590);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblKategori);
+            this.Controls.Add(this.lblUppdateringsfrekvens);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.cboKategori);
             this.Controls.Add(this.cboUppdateringsfrekverns);
             this.Controls.Add(this.btnTaBort1);
             this.Controls.Add(this.btnSpara1);
@@ -169,6 +171,11 @@
 
         }
 
+        private void cboKategori_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private System.Windows.Forms.Label label1;
@@ -177,11 +184,11 @@
         private System.Windows.Forms.Button btnSpara1;
         private System.Windows.Forms.Button btnTaBort1;
         private System.Windows.Forms.ComboBox cboUppdateringsfrekverns;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cboKategori;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblUppdateringsfrekvens;
+        private System.Windows.Forms.Label lblKategori;
     }
 }
 
