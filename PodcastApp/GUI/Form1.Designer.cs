@@ -37,10 +37,16 @@ namespace GUI
             this.btnTaBort1 = new System.Windows.Forms.Button();
             this.cboUppdateringsfrekverns = new System.Windows.Forms.ComboBox();
             this.cboKategori = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtURL = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblUppdateringsfrekvens = new System.Windows.Forms.Label();
             this.lblKategori = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.txtKategori = new System.Windows.Forms.TextBox();
+            this.btnNy2 = new System.Windows.Forms.Button();
+            this.btnSpara2 = new System.Windows.Forms.Button();
+            this.btnTaBort2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -103,20 +109,20 @@ namespace GUI
             // cboKategori
             // 
             this.cboKategori.FormattingEnabled = true;
-            this.cboKategori.Location = new System.Drawing.Point(404, 262);
+            this.cboKategori.Location = new System.Drawing.Point(404, 269);
             this.cboKategori.Name = "cboKategori";
             this.cboKategori.Size = new System.Drawing.Size(121, 28);
             this.cboKategori.TabIndex = 7;
             this.cboKategori.SelectedIndexChanged += new System.EventHandler(this.cboKategori_SelectedIndexChanged);
             // 
-            // textBox1
+            // txtURL
             // 
-            this.textBox1.Location = new System.Drawing.Point(18, 271);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(233, 26);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.Text = "http://";
+            this.txtURL.Location = new System.Drawing.Point(18, 271);
+            this.txtURL.Name = "txtURL";
+            this.txtURL.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtURL.Size = new System.Drawing.Size(233, 26);
+            this.txtURL.TabIndex = 8;
+            this.txtURL.Text = "http://";
             // 
             // label2
             // 
@@ -145,16 +151,74 @@ namespace GUI
             this.lblKategori.TabIndex = 11;
             this.lblKategori.Text = ":Kategori";
             // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 20;
+            this.listBox2.Location = new System.Drawing.Point(798, 46);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(299, 164);
+            this.listBox2.TabIndex = 12;
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 20;
+            this.listBox3.Location = new System.Drawing.Point(18, 384);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(487, 184);
+            this.listBox3.TabIndex = 13;
+            // 
+            // txtKategori
+            // 
+            this.txtKategori.Location = new System.Drawing.Point(798, 219);
+            this.txtKategori.Name = "txtKategori";
+            this.txtKategori.Size = new System.Drawing.Size(299, 26);
+            this.txtKategori.TabIndex = 14;
+            // 
+            // btnNy2
+            // 
+            this.btnNy2.Location = new System.Drawing.Point(798, 252);
+            this.btnNy2.Name = "btnNy2";
+            this.btnNy2.Size = new System.Drawing.Size(75, 38);
+            this.btnNy2.TabIndex = 15;
+            this.btnNy2.Text = "...Ny";
+            this.btnNy2.UseVisualStyleBackColor = true;
+            // 
+            // btnSpara2
+            // 
+            this.btnSpara2.Location = new System.Drawing.Point(913, 252);
+            this.btnSpara2.Name = "btnSpara2";
+            this.btnSpara2.Size = new System.Drawing.Size(75, 38);
+            this.btnSpara2.TabIndex = 16;
+            this.btnSpara2.Text = "Spara";
+            this.btnSpara2.UseVisualStyleBackColor = true;
+            // 
+            // btnTaBort2
+            // 
+            this.btnTaBort2.Location = new System.Drawing.Point(1022, 252);
+            this.btnTaBort2.Name = "btnTaBort2";
+            this.btnTaBort2.Size = new System.Drawing.Size(75, 38);
+            this.btnTaBort2.TabIndex = 17;
+            this.btnTaBort2.Text = "Ta bort";
+            this.btnTaBort2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1173, 590);
+            this.Controls.Add(this.btnTaBort2);
+            this.Controls.Add(this.btnSpara2);
+            this.Controls.Add(this.btnNy2);
+            this.Controls.Add(this.txtKategori);
+            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.lblKategori);
             this.Controls.Add(this.lblUppdateringsfrekvens);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtURL);
             this.Controls.Add(this.cboKategori);
             this.Controls.Add(this.cboUppdateringsfrekverns);
             this.Controls.Add(this.btnTaBort1);
@@ -185,10 +249,16 @@ namespace GUI
         private System.Windows.Forms.Button btnTaBort1;
         private System.Windows.Forms.ComboBox cboUppdateringsfrekverns;
         private System.Windows.Forms.ComboBox cboKategori;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtURL;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblUppdateringsfrekvens;
         private System.Windows.Forms.Label lblKategori;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.TextBox txtKategori;
+        private System.Windows.Forms.Button btnNy2;
+        private System.Windows.Forms.Button btnSpara2;
+        private System.Windows.Forms.Button btnTaBort2;
     }
 }
 
