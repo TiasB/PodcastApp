@@ -79,6 +79,7 @@ namespace GUI
             this.btnNy1.TabIndex = 2;
             this.btnNy1.Text = "...Ny";
             this.btnNy1.UseVisualStyleBackColor = true;
+            this.btnNy1.Click += new System.EventHandler(this.btnNy1_Click);
             // 
             // btnSpara1
             // 

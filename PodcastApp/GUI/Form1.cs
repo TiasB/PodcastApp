@@ -28,5 +28,10 @@ namespace GUI
         {
 
         }
+
+        private void btnNy1_Click(object sender, EventArgs e)
+        {
+            txtURL.Text = string.Empty;
+        }
     }
 }
