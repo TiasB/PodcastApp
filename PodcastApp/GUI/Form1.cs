@@ -46,5 +46,15 @@ namespace GUI
         {
             
         }
+
+        private void cboUppdateringsfrekverns_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtURL_TextChanged(object sender, EventArgs e)
+        {
+       
+        }
     }
 }
