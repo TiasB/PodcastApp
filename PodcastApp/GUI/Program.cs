@@ -10,25 +10,23 @@ namespace GUI
 {
     class Program
     {
-        private static readonly IDataService<string[,]> _dataService;
-        private static readonly IPresentationService<string[,]> _presentationService;
+        //private static readonly IDataService<string[,]> _dataService;
+        //    //private static readonly IPresentationService<string[,]> _presentationService;
 
-        static Program()
+        //    static Program()
+        //    //{
+        //    //    _dataService = new RealDataService("artwork.json");
+        //    //    _presentationService = new PresentationService();
+        //    }
+
+        static void Main()
         {
-            _dataService = new RealDataService("artwork.json");
-            _presentationService = new PresentationService();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
-
-        static void Main(string[] args)
-        {
-            Console.CursorVisible = false; // ställer till en massa problem annars
-
-            var artwork = _dataService.Load();
-
-            _presentationService.Output(artwork, Console.OpenStandardOutput());
-            _dataService.Save(artwork);
-            Console.ReadKey();
-        }
+        //}
     }
-}
+    }
+
 

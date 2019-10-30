@@ -13,14 +13,16 @@ namespace SharedModels
 
         public string Description { get; set; }
 
-        //protected PodcastShow(string title, string url, string description)
-       // {
-         //   Title = title;
-           // Url = url;
-           // Description = description;
-        //}
+        public PodcastShow(string title, string url,  string desc)
+       {
+            this.Title = title;
+            this.Url = url;
+            this.Description = desc;
+       }
 
+        public PodcastShow()
+        {
             
-
+        }
     }
 }

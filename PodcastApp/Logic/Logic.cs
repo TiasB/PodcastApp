@@ -15,7 +15,7 @@ namespace Logic
         public static List<PodcastShow> GetPodcastFeed()
         {
             List<PodcastShow> Podcastlista = new List<PodcastShow>();
-            string rssFeedurl = "https://whenwewerekings.libsyn.com/rss?fbclid=IwAR2MayKhONkXQxoR7znEoT-qZxdrW5dRO4Au_sXTQskiADO6MMwWuewRO_I";
+            string rssFeedurl = "http://borssnack.libsyn.com/rss";
             using (XmlReader reader = XmlReader.Create(rssFeedurl))
             {
                 SyndicationFeed feed = SyndicationFeed.Load(reader);
