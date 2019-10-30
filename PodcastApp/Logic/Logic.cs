@@ -10,5 +10,6 @@ namespace Logic
 {
     public class Logic
     {
+        string url = txtURL.
     }
 }

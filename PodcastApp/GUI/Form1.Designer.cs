@@ -47,6 +47,8 @@ namespace GUI
             this.btnNy2 = new System.Windows.Forms.Button();
             this.btnSpara2 = new System.Windows.Forms.Button();
             this.btnTaBort2 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -68,7 +70,7 @@ namespace GUI
             this.listBox1.Location = new System.Drawing.Point(18, 46);
             this.listBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(487, 184);
+            this.listBox1.Size = new System.Drawing.Size(81, 64);
             this.listBox1.TabIndex = 1;
             // 
             // btnNy1
@@ -204,12 +206,23 @@ namespace GUI
             this.btnTaBort2.Text = "Ta bort";
             this.btnTaBort2.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(200, 29);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(305, 172);
+            this.dataGridView1.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1173, 590);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnTaBort2);
             this.Controls.Add(this.btnSpara2);
             this.Controls.Add(this.btnNy2);
@@ -231,6 +244,7 @@ namespace GUI
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "PodcastApp";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,6 +274,7 @@ namespace GUI
         private System.Windows.Forms.Button btnNy2;
         private System.Windows.Forms.Button btnSpara2;
         private System.Windows.Forms.Button btnTaBort2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
