@@ -44,7 +44,7 @@ namespace GUI
         }
         private void listBox3_MouseClick(object sender, MouseEventArgs e)
         {
-            var list = RSSreader.GetPodcastFeed(txtURL.Text);
+            var list = RSSreader.GetPodcastFeed(txtURL.Text, cboKategori.Text);
             foreach (PodcastShow item in list)
             {
                 if (item == listBox3.SelectedItem)
