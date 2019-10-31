@@ -89,6 +89,7 @@ namespace GUI
             this.btnSpara1.TabIndex = 3;
             this.btnSpara1.Text = "Spara";
             this.btnSpara1.UseVisualStyleBackColor = true;
+            this.btnSpara1.Click += new System.EventHandler(this.btnSpara1_Click);
             // 
             // btnTaBort1
             // 
@@ -103,11 +104,16 @@ namespace GUI
             // cboUppdateringsfrekverns
             // 
             this.cboUppdateringsfrekverns.FormattingEnabled = true;
+            this.cboUppdateringsfrekverns.Items.AddRange(new object[] {
+            "5",
+            "30",
+            "60"});
             this.cboUppdateringsfrekverns.Location = new System.Drawing.Point(171, 175);
             this.cboUppdateringsfrekverns.Margin = new System.Windows.Forms.Padding(2);
             this.cboUppdateringsfrekverns.Name = "cboUppdateringsfrekverns";
             this.cboUppdateringsfrekverns.Size = new System.Drawing.Size(82, 21);
             this.cboUppdateringsfrekverns.TabIndex = 6;
+            this.cboUppdateringsfrekverns.Text = "(Minuter)";
             this.cboUppdateringsfrekverns.SelectedIndexChanged += new System.EventHandler(this.cboUppdateringsfrekverns_SelectedIndexChanged);
             // 
             // cboKategori
