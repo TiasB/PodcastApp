@@ -52,10 +52,10 @@ namespace GUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 18);
+            this.label1.Size = new System.Drawing.Size(83, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Podcasts";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -213,6 +213,7 @@ namespace GUI
             this.btnSpara2.TabIndex = 16;
             this.btnSpara2.Text = "Spara";
             this.btnSpara2.UseVisualStyleBackColor = true;
+            this.btnSpara2.Click += new System.EventHandler(this.btnSpara2_Click);
             // 
             // btnTaBort2
             // 

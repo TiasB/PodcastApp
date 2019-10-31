@@ -6,39 +6,47 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace Data.Services
-{
-    public class RealDataService : IDataService<string[,]>
-    {
-        private readonly string _filename;
-        private readonly JsonSerializer _jsonSerializer;
+//namespace Data.Services
+//{
+//    public class RealDataService : IDataService<string[,]>
+//    {
+//        private readonly string _filename;
+//        private readonly JsonSerializer _jsonSerializer;
 
-        public RealDataService(string filename)
-        {
-            _filename = filename;
-            _jsonSerializer = new JsonSerializer { TypeNameHandling = TypeNameHandling.All };
-        }
+//        public RealDataService(string filename)
+//        {
+//            _filename = filename;
+//            _jsonSerializer = new JsonSerializer { TypeNameHandling = TypeNameHandling.All };
+//        }
 
-        public string[,] Load()
-        {
-            using (var sr = new StreamReader(_filename))
-            {
-                using (var jtr = new JsonTextReader(sr))
-                {
-                    return _jsonSerializer.Deserialize<string[,]>(jtr);
-                }
-            }
-        }
+//        public string[,] Load()
+//        {
+//            using (var sr = new StreamReader(_filename))
+//            {
+//                using (var jtr = new JsonTextReader(sr))
+//                {
+//                    return _jsonSerializer.Deserialize<string[,]>(jtr);
+//                }
+//            }
+//        }
 
-        public void Save(string[,] items)
-        {
-            using (var sw = new StreamWriter(_filename))
-            {
-                using (var jtw = new JsonTextWriter(sw))
-                {
-                    _jsonSerializer.Serialize(jtw, items);
-                }
-            }
-        }
-    }
-}
+//        public void Save(string[,] items)
+//        {
+//            using (var sw = new StreamWriter(_filename))
+//            {
+//                using (var jtw = new JsonTextWriter(sw))
+//                {
+//                    _jsonSerializer.Serialize(jtw, items);
+//                }
+//            }
+//        }
+//    }
+//            //private static readonly IDataService<string[,]> _dataService;
+//        //    //private static readonly IPresentationService<string[,]> _presentationService;
+
+//        //    static Program()
+//        //    //{
+//        //    //    _dataService = new RealDataService("artwork.json");
+//        //    //    _presentationService = new PresentationService();
+//        //    }
+//}

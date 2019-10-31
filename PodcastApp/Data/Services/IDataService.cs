@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data.Services
-{
-    public interface IDataService<T>
-    {
-        T Load();
-        void Save(T items);
-    }
-}
+//namespace Data.Services
+//{
+//    public interface IDataService<T>
+//    {
+//        T Load();
+//        void Save(T items);
+//    }
+//}
