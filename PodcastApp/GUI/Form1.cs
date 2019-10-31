@@ -49,7 +49,7 @@ namespace GUI
                 listBox3.Items.Add(item.Title);
             }
             listBox3.Items.Add(RSSreader.GetPodcastFeed(txtURL.Text));
-            PodcastShow.WritePodcastsToFile(list, filepath: @"C:\Users\Sandell\Documents\GitHub\PodcastApp\PodcastApp\Data\bin\Debug");
+            
 
 
 
@@ -120,8 +120,13 @@ namespace GUI
 
         private void btnSpara2_Click(object sender, EventArgs e)
         {
+            var list = RSSreader.GetPodcastFeed(txtURL.Text);
+            foreach (PodcastShow item in list)
+            {
+                PodcastShow.WritePodcastsToFile(list, @"C:\Users\Sandell\Documents\GitHub\PodcastApp\PodcastApp\Data\bin\Debug");
+            } 
 
-
+            
         }
     }
 }

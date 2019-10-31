@@ -28,7 +28,9 @@ namespace SharedModels
             
         }
         public static List<PodcastShow> ReadPodcastsFromFile(string filepath)
-        {
+        { 
+
+
             if (!File.Exists(filepath)) return new List<PodcastShow>();
 
             string json = File.ReadAllText(filepath);
@@ -42,7 +44,7 @@ namespace SharedModels
         }
         public void SaveFile(PodcastShow podcast)
         {
-            var filepath = @"C:\Users\Sandell\Documents\GitHub\PodcastApp\PodcastApp\Data\bin\Debug";
+            var filepath = @"C:\Users\Sandell\Documents\GitHub\PodcastApp\PodcastApp\Data\bin\Debug\";
             List<PodcastShow> podcasts = ReadPodcastsFromFile(filepath);
             podcasts.Add(podcast);
             WritePodcastsToFile(podcasts, filepath);
@@ -51,3 +53,4 @@ namespace SharedModels
 
     }
 }
+  
