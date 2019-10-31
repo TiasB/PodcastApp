@@ -35,7 +35,7 @@ namespace GUI
 
         private void btnNy1_Click(object sender, EventArgs e)
         {
-            listBox1.DataSource = (Logic.Logic.GetPodcastFeed());
+            listBox1.DataSource = (Logic.RSSreader.GetPodcastFeed());
         }
 
         private void cboUppdateringsfrekverns_SelectedIndexChanged(object sender, EventArgs e)
@@ -52,5 +52,16 @@ namespace GUI
         {
             
         }
+        //private void listBox1_MouseClick(object sender, MouseEventArgs e)
+        //{
+        //    var list = RSSreader.rssRead(tbxURL.Text);
+        //    foreach (Tuple<string, string> item in list)
+        //    {
+        //        if (item == listBox2.SelectedItem) // Notice the equality operator
+        //        {
+        //            richTextBox1.Text = item.Item2.ToString();
+        //        }
+        //    }
+        //}
     }
 }
