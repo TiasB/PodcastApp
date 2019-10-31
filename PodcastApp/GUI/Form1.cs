@@ -35,16 +35,16 @@ namespace GUI
 
         private void btnNy1_Click(object sender, EventArgs e)
         {
-            var list = RSSreader.GetPodcastFeed(txtURL.Text, cboKategori.Text);
+            var list = RSSreader.GetPodcastFeed(txtURL.Text);
             foreach (PodcastShow item in list)
             {
                 listBox3.Items.Add(item.Title);
             }
-            listBox3.Items.Add(RSSreader.GetPodcastFeed(txtURL.Text, cboKategori.Text));
+            listBox3.Items.Add(RSSreader.GetPodcastFeed(txtURL.Text);
         }
         private void listBox3_MouseClick(object sender, MouseEventArgs e)
         {
-            var list = RSSreader.GetPodcastFeed(txtURL.Text, cboKategori.Text);
+            var list = RSSreader.GetPodcastFeed(txtURL.Text);
             foreach (PodcastShow item in list)
             {
                 if (item == listBox3.SelectedItem)
