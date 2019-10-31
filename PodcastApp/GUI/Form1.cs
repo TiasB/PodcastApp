@@ -35,7 +35,12 @@ namespace GUI
 
         private void btnNy1_Click(object sender, EventArgs e)
         {
-            listBox1.DataSource = (Logic.RSSreader.GetPodcastFeed());
+            var list = RSSreader.GetPodcastFeed(txtURL.Text);
+            foreach (PodcastShow item in list)
+            {
+                listBox3.Items.Add(item.Title);
+            }
+            listBox3.Items.Add(RSSreader.GetPodcastFeed(txtURL.Text));
         }
 
         private void cboUppdateringsfrekverns_SelectedIndexChanged(object sender, EventArgs e)
