@@ -177,6 +177,7 @@ namespace GUI
             this.listBox3.Margin = new System.Windows.Forms.Padding(2);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(326, 121);
+            this.listBox3.Sorted = true;
             this.listBox3.TabIndex = 13;
             // 
             // txtKategori
