@@ -128,7 +128,7 @@ namespace GUI
             this.txtURL.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtURL.Size = new System.Drawing.Size(157, 20);
             this.txtURL.TabIndex = 8;
-            this.txtURL.Text = "http://";
+            this.txtURL.Text = "http://borssnack.libsyn.com/rss";
             this.txtURL.TextChanged += new System.EventHandler(this.txtURL_TextChanged);
             // 
             // label2
@@ -177,8 +177,8 @@ namespace GUI
             this.listBox3.Margin = new System.Windows.Forms.Padding(2);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(326, 121);
-            this.listBox3.Sorted = true;
             this.listBox3.TabIndex = 13;
+            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
             // txtKategori
             // 

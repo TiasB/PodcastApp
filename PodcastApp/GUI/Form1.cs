@@ -40,19 +40,10 @@ namespace GUI
             {
                 listBox3.Items.Add(item.Title);
             }
-            listBox3.Items.Add(RSSreader.GetPodcastFeed(txtURL.Text);
+            listBox3.Items.Add(RSSreader.GetPodcastFeed(txtURL.Text));
         }
-        private void listBox3_MouseClick(object sender, MouseEventArgs e)
-        {
-            var list = RSSreader.GetPodcastFeed(txtURL.Text);
-            foreach (PodcastShow item in list)
-            {
-                if (item == listBox3.SelectedItem)
-                {
-                    listBox3.Items.Add(item);
-                }
-            }
-        }
+
+       
 
         private void cboUppdateringsfrekverns_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -67,6 +58,23 @@ namespace GUI
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            {
+                var list = RSSreader.GetPodcastFeed(txtURL.Text);
+                foreach (PodcastShow item in list)
+                {
+                    if (item.Title == listBox3.SelectedItem.ToString())
+                    {
+                        listBox1.Items.Add(item.Description);
+                    }
+
+
+                }
+            }
+
         }
         //private void listBox1_MouseClick(object sender, MouseEventArgs e)
         //{
