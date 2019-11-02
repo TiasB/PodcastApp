@@ -120,15 +120,13 @@ namespace GUI
         }
 
         private void btnSpara2_Click(object sender, EventArgs e)
-           {   
-            string filepath = Path.Combine(Environment.CurrentDirectory, @"Data\");
+           {
+           
             var list = RSSreader.GetPodcastFeed(txtURL.Text);
-            foreach (PodcastShow item in list)
-            {
-                PodcastShow.WritePodcastsToFile(list,filepath);
-            } 
+            PodcastShow.WritePodcastsToFile(list, Path.Combine(Environment.CurrentDirectory));
 
-            
+
+
         }
     }
 }

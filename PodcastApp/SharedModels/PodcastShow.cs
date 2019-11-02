@@ -36,16 +36,18 @@ namespace SharedModels
             string json = File.ReadAllText(filepath);
             return JsonConvert.DeserializeObject<List<PodcastShow>>(json);
         }
-        public static void WritePodcastsToFile(List<PodcastShow> podcasts, string filepath)
-        {
-            JsonSerializer serializer = new JsonSerializer();
-            string json = JsonConvert.SerializeObject(podcasts);
-            StreamWriter sw = File.CreateText(filepath);
-            using (JsonWriter writer = new JsonTextWriter(sw))
-            
-                serializer.Serialize(writer, json);
-            
-        }
+
+            public static void WritePodcastsToFile(List<PodcastShow> podcasts, string filepath) { 
+                // This will overwrite the file if it exists, or create a new one if it doesn't
+                File.WriteAllText(filepath, JsonConvert.SerializeObject(podcasts));
+            using (StreamWriter file = File.CreateText(Path.Combine(Environment.CurrentDirectory)))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, podcasts);
+
+            }
+            }
+        
         public void SaveFile(PodcastShow podcast)
         {
          
