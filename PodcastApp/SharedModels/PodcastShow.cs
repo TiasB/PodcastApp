@@ -38,13 +38,19 @@ namespace SharedModels
         }
         public static void WritePodcastsToFile(List<PodcastShow> podcasts, string filepath)
         {
+            JsonSerializer serializer = new JsonSerializer();
             string json = JsonConvert.SerializeObject(podcasts);
-            // This will overwrite the file if it exists, or create a new one if it doesn't
-            File.WriteAllText(filepath, json);
+            StreamWriter sw = File.CreateText(filepath);
+            using (JsonWriter writer = new JsonTextWriter(sw))
+            
+                serializer.Serialize(writer, json);
+            
         }
         public void SaveFile(PodcastShow podcast)
         {
-            var filepath = @"C:\Users\Sandell\Documents\GitHub\PodcastApp\PodcastApp\Data\bin\Debug\";
+         
+            string fileName = "PodcastApp";
+            string filepath = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
             List<PodcastShow> podcasts = ReadPodcastsFromFile(filepath);
             podcasts.Add(podcast);
             WritePodcastsToFile(podcasts, filepath);

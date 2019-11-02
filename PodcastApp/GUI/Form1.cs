@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -119,11 +120,12 @@ namespace GUI
         }
 
         private void btnSpara2_Click(object sender, EventArgs e)
-        {
+           {   
+            string filepath = Path.Combine(Environment.CurrentDirectory, @"Data\");
             var list = RSSreader.GetPodcastFeed(txtURL.Text);
             foreach (PodcastShow item in list)
             {
-                PodcastShow.WritePodcastsToFile(list, @"C:\Users\Sandell\Documents\GitHub\PodcastApp\PodcastApp\Data\bin\Debug");
+                PodcastShow.WritePodcastsToFile(list,filepath);
             } 
 
             
