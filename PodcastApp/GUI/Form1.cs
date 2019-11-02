@@ -123,7 +123,7 @@ namespace GUI
            {
            
             var list = RSSreader.GetPodcastFeed(txtURL.Text);
-            PodcastShow.WritePodcastsToFile(list, Path.Combine(Environment.CurrentDirectory));
+            PodcastShow.ReadPodcastsFromFile(Path.Combine(Environment.CurrentDirectory));
 
 
 
