@@ -63,9 +63,9 @@ namespace GUI
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(21, 44);
+            this.listBox1.Location = new System.Drawing.Point(21, 30);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(261, 95);
+            this.listBox1.Size = new System.Drawing.Size(329, 108);
             this.listBox1.TabIndex = 1;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -170,19 +170,19 @@ namespace GUI
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(532, 30);
+            this.listBox2.Location = new System.Drawing.Point(532, 17);
             this.listBox2.Margin = new System.Windows.Forms.Padding(2);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(201, 108);
+            this.listBox2.Size = new System.Drawing.Size(286, 121);
             this.listBox2.TabIndex = 12;
             // 
             // listBox3
             // 
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(12, 250);
+            this.listBox3.Location = new System.Drawing.Point(12, 237);
             this.listBox3.Margin = new System.Windows.Forms.Padding(2);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(326, 121);
+            this.listBox3.Size = new System.Drawing.Size(360, 134);
             this.listBox3.TabIndex = 13;
             this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
@@ -191,12 +191,12 @@ namespace GUI
             this.txtKategori.Location = new System.Drawing.Point(532, 142);
             this.txtKategori.Margin = new System.Windows.Forms.Padding(2);
             this.txtKategori.Name = "txtKategori";
-            this.txtKategori.Size = new System.Drawing.Size(201, 20);
+            this.txtKategori.Size = new System.Drawing.Size(286, 20);
             this.txtKategori.TabIndex = 14;
             // 
             // btnNy2
             // 
-            this.btnNy2.Location = new System.Drawing.Point(532, 164);
+            this.btnNy2.Location = new System.Drawing.Point(556, 164);
             this.btnNy2.Margin = new System.Windows.Forms.Padding(2);
             this.btnNy2.Name = "btnNy2";
             this.btnNy2.Size = new System.Drawing.Size(50, 25);
@@ -206,7 +206,7 @@ namespace GUI
             // 
             // btnSpara2
             // 
-            this.btnSpara2.Location = new System.Drawing.Point(609, 164);
+            this.btnSpara2.Location = new System.Drawing.Point(648, 164);
             this.btnSpara2.Margin = new System.Windows.Forms.Padding(2);
             this.btnSpara2.Name = "btnSpara2";
             this.btnSpara2.Size = new System.Drawing.Size(50, 25);
@@ -217,7 +217,7 @@ namespace GUI
             // 
             // btnTaBort2
             // 
-            this.btnTaBort2.Location = new System.Drawing.Point(681, 164);
+            this.btnTaBort2.Location = new System.Drawing.Point(753, 164);
             this.btnTaBort2.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaBort2.Name = "btnTaBort2";
             this.btnTaBort2.Size = new System.Drawing.Size(50, 25);
@@ -230,7 +230,7 @@ namespace GUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(782, 383);
+            this.ClientSize = new System.Drawing.Size(875, 428);
             this.Controls.Add(this.btnTaBort2);
             this.Controls.Add(this.btnSpara2);
             this.Controls.Add(this.btnNy2);

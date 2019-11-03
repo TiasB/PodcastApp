@@ -120,11 +120,9 @@ namespace GUI
         }
 
         private void btnSpara2_Click(object sender, EventArgs e)
-           {
-           
-            var list = RSSreader.GetPodcastFeed(txtURL.Text);
-            PodcastShow.ReadPodcastsFromFile(Path.Combine(Environment.CurrentDirectory));
+        { 
 
+            RSSreader.Serialize();
 
 
         }

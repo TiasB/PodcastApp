@@ -18,7 +18,7 @@ namespace Data
             {
                 using (var sw = new StreamWriter(fs))
                 {
-                    sw.Write(data.PodcastShow.Serialize());
+                    sw.Write(data.Serialize());
                 }
             }
 

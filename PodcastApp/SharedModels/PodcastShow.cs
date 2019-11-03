@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace SharedModels
 {
-    public  class PodcastShow
+    public  class PodcastShow : ISerializable
     {
         public string Title { get; set; }
         public string Url { get; set; }
@@ -30,7 +31,12 @@ namespace SharedModels
         }
         public string Serialize()
         {
-            return string.Join("|", new[] { Title, Url, Description });
+            var lines = new List<PodcastShow>();
+            foreach (var item in lines)
+            {
+                lines.Add(item.Serialize());
+            }
+            return string.Join("\n", lines.ToArray());
         }
         //public static void Write<PodcastShow>(string filename, PodcastShow data)
         //{
