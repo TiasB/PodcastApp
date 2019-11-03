@@ -28,6 +28,10 @@ namespace SharedModels
         {
             
         }
+        public string Serialize()
+        {
+            return string.Join("|", new[] { Title, Url, Description });
+        }
         //public static void Write<PodcastShow>(string filename, PodcastShow data)
         //{
         //    // TODO: Write data.Serialize() into filename using StreamWriter!
