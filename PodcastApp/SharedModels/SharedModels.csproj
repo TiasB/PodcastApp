@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Kategori.cs" />
     <Compile Include="PodcastShow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
