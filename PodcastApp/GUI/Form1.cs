@@ -11,6 +11,7 @@ using System.Timers;
 using System.Windows.Forms;
 
 using Logic;
+using Newtonsoft.Json;
 using SharedModels;
 using Timer = System.Windows.Forms.Timer;
 
@@ -159,6 +160,16 @@ namespace GUI
 
 
                 }
+            }
+        }
+
+        private void btnNy2_Click(object sender, EventArgs e)
+        {
+            var list = RSSreader.GetPodcastFeed(txtURL.Text);
+            var jsonSerialiser = new JsonSerializer();
+            foreach (PodcastShow item in list)
+            {
+                jsonSerialiser.Serialize(item);
             }
         }
     }

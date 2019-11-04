@@ -205,6 +205,7 @@ namespace GUI
             this.btnNy2.TabIndex = 15;
             this.btnNy2.Text = "...Ny";
             this.btnNy2.UseVisualStyleBackColor = true;
+            this.btnNy2.Click += new System.EventHandler(this.btnNy2_Click);
             // 
             // btnSpara2
             // 

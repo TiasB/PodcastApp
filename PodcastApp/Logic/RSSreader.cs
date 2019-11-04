@@ -10,6 +10,7 @@ using System.Xml;
 using Data;
 using Newtonsoft.Json;
 using SharedModels;
+using 
 namespace Logic
 {
     public class RSSreader
@@ -90,7 +91,102 @@ namespace Logic
                 throw new Exception(ex.Message);
             }
         }
+        public static void Write<T>(string filename, T data) where T : ISerializeable
+        {
+            // TODO: Write data.Serialize() into filename using StreamWriter!
+            using (var fs = new FileStream(filename, FileMode.OpenOrCreate))
+            {
+                using (var sw = new StreamWriter(fs))
+                {
+                    sw.Write(data.Serialize());
+                }
+            }
+        }
+        public static T Read<T>(string filename) where T : ISerializeable, new()
+        {
+            var filecontent = "";
 
+            using (var fs = new FileStream(filename, FileMode.Open))
+            {
+                using (var sr = new StreamReader(fs))
+                {
+                    filecontent = sr.ReadToEnd();
+                }
+            }
+
+            if (!string.IsNullOrEmpty(filecontent))
+            {
+                try
+                {
+                    return SerializeableFactory.FromString<T>(filecontent);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+           
+        }
 
     }
+    public class vetej
+    {
+        static string dbFile = "data.txt";
+        List<PodcastShow> podcastlista = new List<PodcastShow>();
+
+        public static void bajs(string[] args)
+        {
+            PodcastShow podcast;
+            if (File.Exists(dbFile))
+            {
+                try
+                {
+                    podcast = RSSreader.Read <> (dbFile);
+
+                    Console.WriteLine("Read " + books.Count + " books from file");
+
+                    foreach (var book in books)
+                    {
+                        Console.WriteLine(book.Author);
+                        Console.WriteLine(book.Title);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+            else
+            {
+                books = new BookList {
+                    new Book { Author = "Douglas Adams", Title = "The Hitch Hiker's Guide to the Galaxy"},
+                    new Book { Author = "Douglas Adams", Title = "Dirk Gently's Holistic Detective Agency"}
+                };
+
+                // TODO: Handle exceptions!
+                try
+                {
+                    SerializedReaderWriter.Write<BookList>(dbFile, books);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Serialization failed!");
+                    Console.WriteLine(e.Message);
+                }
+            }
+
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+        }
+    }
+
+
+
+
+
+
+
+
+
+}
 }
