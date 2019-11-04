@@ -18,12 +18,12 @@ namespace SharedModels
         public string Description { get; set; }
 
 
-        public PodcastShow(string title, string url, string desc, Kategori kat)
+        public PodcastShow(string title, string url, string desc)
         {
             this.Title = title;
             this.Url = url;
             this.Description = desc;
-            this.kat = new Kategori();
+          
 
 
 

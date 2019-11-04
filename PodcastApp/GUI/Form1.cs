@@ -131,11 +131,11 @@ namespace GUI
             var list = RSSreader.GetPodcastFeed(txtURL.Text);
             string kategorin = txtKategori.Text;
 
-            foreach (PodcastShow item in list)
-                item.Kategori = kategorin;
-            {
-                listBox2.Items.Add(kategorin);
-            }
+            //foreach (PodcastShow item in list)
+            //    item.Kategori = kategorin;
+            //{
+            //    listBox2.Items.Add(kategorin);
+            //}
 
 
 
@@ -152,10 +152,10 @@ namespace GUI
                 var list = RSSreader.GetPodcastFeed(txtURL.Text);
                 foreach (PodcastShow item in list)
                 {
-                    if (item.kat.Equals(listBox2.SelectedItem.ToString())) 
-                    {
-                        listBox1.Items.Add(item.Title);
-                    }
+                    //if (item.kat.Equals(listBox2.SelectedItem.ToString())) 
+                    //{
+                    //    listBox1.Items.Add(item.Title);
+                    //}
 
 
                 }
