@@ -44,13 +44,20 @@ namespace GUI
 
         private void btnNy1_Click(object sender, EventArgs e)
         {
-            var list = RSSreader.GetPodcastFeed(txtURL.Text);
+            string namn = txtURL.Text;
+            var list = RSSreader.GetPodcastFeed(namn);
             foreach (PodcastShow item in list)
             {
                 listBox3.Items.Add(item.Title);
+               
+
             }
-            listBox3.Items.Add(RSSreader.GetPodcastFeed(txtURL.Text));
-            
+            listBox3.Items.Add(RSSreader.GetPodcastFeed(namn));
+
+
+
+
+
 
 
 
@@ -120,10 +127,27 @@ namespace GUI
         }
 
         private void btnSpara2_Click(object sender, EventArgs e)
-        { 
+        {
+            var list = RSSreader.GetPodcastFeed(txtURL.Text);
+            string kategorin = txtKategori.Text;
 
-            RSSreader.Serialize();
+            foreach (PodcastShow item in list)
+                item.Kategori = kategorin;
+                {
+                    listBox2.Items.Add(kategorin);
+                }
 
+
+
+        }
+
+        private void txtKategori_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

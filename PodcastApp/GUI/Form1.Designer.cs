@@ -175,6 +175,7 @@ namespace GUI
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(286, 121);
             this.listBox2.TabIndex = 12;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // listBox3
             // 
@@ -193,6 +194,7 @@ namespace GUI
             this.txtKategori.Name = "txtKategori";
             this.txtKategori.Size = new System.Drawing.Size(286, 20);
             this.txtKategori.TabIndex = 14;
+            this.txtKategori.TextChanged += new System.EventHandler(this.txtKategori_TextChanged);
             // 
             // btnNy2
             // 

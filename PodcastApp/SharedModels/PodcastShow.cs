@@ -10,18 +10,23 @@ using Newtonsoft.Json;
 
 namespace SharedModels
 {
-    public  class PodcastShow : ISerializable
+    public  class PodcastShow
     {
         public string Title { get; set; }
         public string Url { get; set; }
 
         public string Description { get; set; }
 
-        public PodcastShow(string title, string url,  string desc)
+        public string Kategori { get; set; }
+
+        public PodcastShow(string title, string url,  string desc, string kat)
        {
             this.Title = title;
             this.Url = url;
             this.Description = desc;
+            this.Kategori = kat;
+
+           
 
        }
 
@@ -29,15 +34,15 @@ namespace SharedModels
         {
             
         }
-        public string Serialize()
-        {
-            var lines = new List<PodcastShow>();
-            foreach (var item in lines)
-            {
-                lines.Add(item.Serialize());
-            }
-            return string.Join("\n", lines.ToArray());
-        }
+        //public string Serialize()
+        //{
+        //    var lines = new List<PodcastShow>();
+        //    foreach (var item in lines)
+        //    {
+        //        lines.Add(item.Serialize());
+        //    }
+        //    return string.Join("\n", lines.ToArray());
+        //}
         //public static void Write<PodcastShow>(string filename, PodcastShow data)
         //{
         //    // TODO: Write data.Serialize() into filename using StreamWriter!

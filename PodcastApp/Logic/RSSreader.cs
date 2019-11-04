@@ -24,7 +24,7 @@ namespace Logic
                 SyndicationFeed feed = SyndicationFeed.Load(reader);
                 foreach (SyndicationItem item in feed.Items)
                 {
-                  
+
                     PodcastShow nypodd = new PodcastShow();
 
                     count++;
@@ -33,13 +33,15 @@ namespace Logic
                     nypodd.Description = item.Summary.Text; //funkar men tar med <p> taggar
                     podcastlista.Add(nypodd);
                     string x = podcastlista.ToString();
-                   
                 }
+ 
 
                 return podcastlista;
+           
             }
 
         }
+        
         private JsonSerializer CreateSerializer()
         {
             return new JsonSerializer
@@ -47,7 +49,7 @@ namespace Logic
                 TypeNameHandling = TypeNameHandling.All
             };
         }
-        public void Serialize<T>(string filename, List<T> Lists)
+        public void Serialize<PodcashShow>(string filename, List<PodcastShow> Lists)
 
         {
            PodcastShow Podcast = new PodcastShow();
