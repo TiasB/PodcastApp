@@ -152,9 +152,9 @@ namespace GUI
                 var list = RSSreader.GetPodcastFeed(txtURL.Text);
                 foreach (PodcastShow item in list)
                 {
-                    if (item.Kategori == listBox3.SelectedItem.ToString())
+                    if (item.kat.Equals(listBox2.SelectedItem.ToString())) 
                     {
-                        listBox3.Items.Add(item.Title);
+                        listBox1.Items.Add(item.Title);
                     }
 
 
