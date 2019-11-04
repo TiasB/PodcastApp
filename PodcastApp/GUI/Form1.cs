@@ -29,7 +29,7 @@ namespace GUI
             timer2.Start();
             timer3.Start();
 
-            
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace GUI
             foreach (PodcastShow item in list)
             {
                 listBox3.Items.Add(item.Title);
-               
+
 
             }
             listBox3.Items.Add(RSSreader.GetPodcastFeed(namn));
@@ -63,7 +63,7 @@ namespace GUI
 
         }
 
-       
+
 
         private void cboUppdateringsfrekverns_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -72,12 +72,12 @@ namespace GUI
 
         private void txtURL_TextChanged(object sender, EventArgs e)
         {
-       
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
@@ -99,11 +99,11 @@ namespace GUI
 
         private void btnSpara1_Click(object sender, EventArgs e)
         {
-            
+
             string x = cboUppdateringsfrekverns.Text;
             int result = Int32.Parse(x);
 
-          Timer t = new Timer();
+            Timer t = new Timer();
 
 
             t.Interval = result * (60000); // specify interval time as you want
@@ -120,7 +120,7 @@ namespace GUI
                 {
                     listBox3.Items.Add(item.Title);
                 }
-               
+
                 //Call method
             }
 
@@ -133,9 +133,9 @@ namespace GUI
 
             foreach (PodcastShow item in list)
                 item.Kategori = kategorin;
-                {
-                    listBox2.Items.Add(kategorin);
-                }
+            {
+                listBox2.Items.Add(kategorin);
+            }
 
 
 
@@ -148,7 +148,18 @@ namespace GUI
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            {
+                var list = RSSreader.GetPodcastFeed(txtURL.Text);
+                foreach (PodcastShow item in list)
+                {
+                    if (item.Kategori == listBox3.SelectedItem.ToString())
+                    {
+                        listBox3.Items.Add(item.Title);
+                    }
 
+
+                }
+            }
         }
     }
 }
