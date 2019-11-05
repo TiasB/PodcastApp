@@ -47,55 +47,29 @@ namespace GUI
 
         private void btnNy1_Click(object sender, EventArgs e)
         {
-        //    string namn = txtURL.Text;
-        //    var list = RSSreader.GetPodcastFeed(namn);
-        //    foreach (PodcastShow item in list)
-        //    {
-        //        listBox3.Items.Add(item.Title);
+            string namn = txtURL.Text;
+            var list = RSSreader.GetPodcastFeed(namn);
+            foreach (PodcastShow item in list)
+            {
+                listBox3.Items.Add(item.Title);
 
 
-        //    }
-        //    listBox3.Items.Add(RSSreader.GetPodcastFeed(namn));
-
-
-
-
-
-
-
-
+            }
+            listBox3.Items.Add(RSSreader.GetPodcastFeed(namn));
         }
-
-
-
-        private void cboUppdateringsfrekverns_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtURL_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             {
-                //var list = RSSreader.GetPodcastFeed(txtURL.Text);
-                //foreach (PodcastShow item in list)
-                //{
-                //    if (item.Title == listBox3.SelectedItem.ToString())
-                //    {
-                //        listBox1.Items.Add(item.Description);
-                //    }
+                var list = RSSreader.GetPodcastFeed(txtURL.Text);
+                foreach (PodcastShow item in list)
+                {
+                    if (item.Title == listBox3.SelectedItem.ToString())
+                    {
+                        listBox1.Items.Add(item.Description);
+                    }
 
 
-                //}
+                }
             }
 
         }
@@ -117,14 +91,14 @@ namespace GUI
         void timer_Tick(object sender, EventArgs e)
         {
             {
-                //var list = RSSreader.GetPodcastFeed(txtURL.Text);
-                //listBox3.Items.Clear();
-                //foreach (PodcastShow item in list)
-                //{
-                //    listBox3.Items.Add(item.Title);
-                //}
+                var list = RSSreader.GetPodcastFeed(txtURL.Text);
+                listBox3.Items.Clear();
+                foreach (PodcastShow item in list)
+                {
+                    listBox3.Items.Add(item.Title);
+                }
 
-                //Call method
+
             }
 
         }
@@ -132,7 +106,7 @@ namespace GUI
         private async void btnSpara2_Click(object sender, EventArgs e)
         {
             await
-                            
+
                reader.sparaPodd(txtURL.Text);
 
 
@@ -145,28 +119,10 @@ namespace GUI
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            {
-                //var list = RSSreader.GetPodcastFeed(txtURL.Text);
-                //foreach (PodcastShow item in list)
-                {
-                    //if (item.kat.Equals(listBox2.SelectedItem.ToString())) 
-                    //{
-                    //    listBox1.Items.Add(item.Title);
-                    //}
-
-
-                }
-            }
         }
 
         private void btnNy2_Click(object sender, EventArgs e)
         {
-        ////    var list = RSSreader.GetPodcastFeed(txtURL.Text);
-        ////    var jsonSerialiser = new JsonSerializer();
-        ////    foreach (PodcastShow item in list)
-        ////    {
-        ////        jsonSerialiser.Serialize(item);
-        ////    }
         }
     }
 }

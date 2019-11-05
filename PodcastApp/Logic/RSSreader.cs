@@ -17,34 +17,34 @@ namespace Logic
     {
         WebClient client = new WebClient();
 
-        //public static List<PodcastShow> GetPodcastFeed(string url)
-        //{
-        //    var count = 0;
-        //    List<PodcastShow> podcastlista = new List<PodcastShow>();
-        //    //string rssfeedurl = "http://borssnack.libsyn.com/rss";
-        //    using (XmlReader reader = XmlReader.Create(url))
-        //    {
-        //        SyndicationFeed feed = SyndicationFeed.Load(reader);
-        //        foreach (SyndicationItem item in feed.Items)
-        //        {
+        public static List<PodcastShow> GetPodcastFeed(string url)
+        {
+            var count = 0;
+            List<PodcastShow> podcastlista = new List<PodcastShow>();
+            //string rssfeedurl = "http://borssnack.libsyn.com/rss";
+            using (XmlReader reader = XmlReader.Create(url))
+            {
+                SyndicationFeed feed = SyndicationFeed.Load(reader);
+                foreach (SyndicationItem item in feed.Items)
+                {
 
-        //            PodcastShow nypodd = new PodcastShow();
+                    PodcastShow nypodd = new PodcastShow();
 
-        //            count++;
-        //            nypodd.Title += item.Title.Text; //funkar
-        //            nypodd.Url += item.Links[0].Uri.OriginalString; //funkar
-        //            nypodd.Description = item.Summary.Text; //funkar men tar med <p> taggar
-        //            podcastlista.Add(nypodd);
-        //            string x = podcastlista.ToString();
-        //        }
- 
+                    count++;
+                    nypodd.Title += item.Title.Text; //funkar
+                    nypodd.Url += item.Links[0].Uri.OriginalString; //funkar
+                    nypodd.Description = item.Summary.Text; //funkar men tar med <p> taggar
+                    podcastlista.Add(nypodd);
+                    string x = podcastlista.ToString();
+                }
 
-        //        return podcastlista;
-           
-        //    }
 
-        //}
-        
+                return podcastlista;
+
+            }
+
+        }
+
         private JsonSerializer CreateSerializer()
         {
             return new JsonSerializer
@@ -74,25 +74,25 @@ namespace Logic
         //    }
         //}
             
-        public List<T> Deserialize<T>(string filename)
-        {
-            try
-            {
-                var serializer = CreateSerializer();
-                using (var sr = new StreamReader(filename))
-                {
-                    using (var jr = new JsonTextReader(sr))
-                    {
-                        var list = serializer.Deserialize<List<T>>(jr);
-                        return list;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
+        //public List<T> Deserialize<T>(string filename)
+        //{
+        //    try
+        //    {
+        //        var serializer = CreateSerializer();
+        //        using (var sr = new StreamReader(filename))
+        //        {
+        //            using (var jr = new JsonTextReader(sr))
+        //            {
+        //                var list = serializer.Deserialize<List<T>>(jr);
+        //                return list;
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw new Exception(ex.Message);
+        //    }
+        //}
         public string SkrivPod(string url)
         {
            
