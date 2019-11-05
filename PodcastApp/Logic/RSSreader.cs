@@ -33,13 +33,16 @@ namespace Logic
                     count++;
                     nypodd.Title += item.Title.Text; //funkar
                     nypodd.Url += item.Links[0].Uri.OriginalString; //funkar
-                    nypodd.Description = item.Summary.Text; //funkar men tar med <p> taggar
+                    nypodd.Description = item.Summary.Text;
+                    nypodd.Kategori = nypodd.getKategori(); //funkar men tar med <p> taggar
                     podcastlista.Add(nypodd);
                     string x = podcastlista.ToString();
+                    
                 }
 
 
                 return podcastlista;
+               
 
             }
 
@@ -52,47 +55,47 @@ namespace Logic
                 TypeNameHandling = TypeNameHandling.All
             };
         }
-        //public void Serialize<PodcashShow>(string filename, List<PodcastShow> Lists)
+        public void Serialize<PodcashShow>(string filename, List<PodcastShow> Lists)
 
-        //{
-        //   PodcastShow Podcast = new PodcastShow();
-        //    try
-        //    {
-        //        var serializer = CreateSerializer();
-        //        using (var sw = new StreamWriter(filename))
-        //        {
-        //            using (var jw = new JsonTextWriter(sw))
-        //            {
-        //                serializer.Formatting = Newtonsoft.Json.Formatting.Indented;
-        //                serializer.Serialize(jw, Podcast);
-        //            }
-        //        }
-        //    }
-        //    catch (Exception)
-        //    {
-        //        throw new Exception(filename);
-        //    }
-        //}
-            
-        //public List<T> Deserialize<T>(string filename)
-        //{
-        //    try
-        //    {
-        //        var serializer = CreateSerializer();
-        //        using (var sr = new StreamReader(filename))
-        //        {
-        //            using (var jr = new JsonTextReader(sr))
-        //            {
-        //                var list = serializer.Deserialize<List<T>>(jr);
-        //                return list;
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw new Exception(ex.Message);
-        //    }
-        //}
+        {
+            PodcastShow Podcast = new PodcastShow();
+            try
+            {
+                var serializer = CreateSerializer();
+                using (var sw = new StreamWriter(filename))
+                {
+                    using (var jw = new JsonTextWriter(sw))
+                    {
+                        serializer.Formatting = Newtonsoft.Json.Formatting.Indented;
+                        serializer.Serialize(jw, Podcast);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw new Exception(filename);
+            }
+        }
+
+        public List<PodcastShow> Deserialize<PodcastShow>(string filename)
+        {
+            try
+            {
+                var serializer = CreateSerializer();
+                using (var sr = new StreamReader(filename))
+                {
+                    using (var jr = new JsonTextReader(sr))
+                    {
+                        var list = serializer.Deserialize<List<PodcastShow>>(jr);
+                        return list;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         public string läsPod(string url)
         {
            
@@ -112,9 +115,10 @@ namespace Logic
 
             XmlWriterSettings setting = new XmlWriterSettings();
             setting.Async= true;
-            PodcastShow pod = new PodcastShow();
-
-            XmlWriter writer = XmlWriter.Create(feed.Title.Text + pod.Kategori +".xml", setting);
+            Deserialize<PodcastShow<GetPodcastFeed>>(url);
+           
+            
+            XmlWriter writer = XmlWriter.Create(feed.Title.Text + PodcastShow.Kategori + ".xml", setting) ;
 
             using (writer)
             {
@@ -126,6 +130,24 @@ namespace Logic
 
 
         }
+    public string getkategori()
+        {
+            foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory()))
+                if (Podcast.Contains(".xml") && !Podcast.Contains("Newtonsoft"))
+                {
+                    string bajs = Path.GetFileName(Podcast);
+
+                    return bajs;
+                    
+                   
+
+            }
+            
+            
+            
+        }
+
+
         public string Pod(string url)
         {
 
@@ -134,6 +156,7 @@ namespace Logic
             StreamReader reader = new StreamReader(stream);
             string xml = reader.ReadToEnd();
             return xml;
+            
 
 
         }
