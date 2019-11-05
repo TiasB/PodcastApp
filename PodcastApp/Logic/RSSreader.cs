@@ -112,8 +112,9 @@ namespace Logic
 
             XmlWriterSettings setting = new XmlWriterSettings();
             setting.Async= true;
+            PodcastShow pod = new PodcastShow();
 
-            XmlWriter writer = XmlWriter.Create(feed.Title.Text + ".xml", setting);
+            XmlWriter writer = XmlWriter.Create(feed.Title.Text + pod.Kategori +".xml", setting);
 
             using (writer)
             {
