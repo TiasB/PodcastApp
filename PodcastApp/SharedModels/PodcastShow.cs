@@ -35,6 +35,11 @@ namespace SharedModels
         {
 
         }
+        public string getKategori()
+        {
+            return Kategori;
+        }
+
     }
 }
 

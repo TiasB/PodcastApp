@@ -110,48 +110,50 @@ namespace GUI
 
         private async void btnSpara2_Click(object sender, EventArgs e)
         {
-           
-                try
-            { await
-                reader.sparaPodd(txtURL.Text);
+
+            try
+            {
+                await
+                  reader.sparaPodd(txtURL.Text);
                 MessageBox.Show(" Du har sparat " + txtURL.Text);
-                
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex);"saas"
             }
-
 
         }
 
         private void txtKategori_TextChanged(object sender, EventArgs e)
         {
-            {
-                foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory()))
-                    if (Podcast.Contains(".xml"))
-                    {
-                    {
-                          var x = reader.läsPod(Podcast);
-                        listBox3.Items.Add(x.Kategori);
-                    }
 
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory()))
+            {
+                if (Podcast.Contains(listBox1.SelectedItem.ToString()))
+                {
+                    string podSpara = Path.GetFileName(Podcast);
+                    listBox2.Items.Add(podSpara);
                 }
             }
         }
+
+        private void btnNy2_Click(object sender, EventArgs e)
+        {
         
 
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-    { }
 
 
-                private void btnNy2_Click(object sender, EventArgs e)
-        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            var list = reader.läsPod(txtURL.Text);
         }
 
         private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -169,6 +171,26 @@ namespace GUI
                 listBox1.Items.Add(podSpara);
             }
             
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string kategorin = txtKategori.Text;
+            var list = RSSreader.GetPodcastFeed(txtURL.Text);
+            foreach (PodcastShow pod in list)
+            {
+                pod.Kategori = kategorin;
+            }
+
+                    listBox2.Items.Add(kategorin);
+                
+
+
         }
     }
 }
