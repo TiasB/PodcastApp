@@ -146,8 +146,8 @@ namespace GUI
             foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory())) 
                 if(Podcast.Contains(".xml"))
             {
-                    string bajs = Path.GetFileName(Podcast);
-                listBox1.Items.Add(bajs);
+                    string podSpara = Path.GetFileName(Podcast);
+                listBox1.Items.Add(podSpara);
             }
             
         }
