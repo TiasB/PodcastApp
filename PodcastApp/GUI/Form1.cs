@@ -23,6 +23,8 @@ namespace GUI
         Timer timer2 = new Timer();
         Timer timer3 = new Timer();
 
+        RSSreader reader = new RSSreader();
+
         public Form1()
         {
             InitializeComponent();
@@ -45,15 +47,15 @@ namespace GUI
 
         private void btnNy1_Click(object sender, EventArgs e)
         {
-            string namn = txtURL.Text;
-            var list = RSSreader.GetPodcastFeed(namn);
-            foreach (PodcastShow item in list)
-            {
-                listBox3.Items.Add(item.Title);
+        //    string namn = txtURL.Text;
+        //    var list = RSSreader.GetPodcastFeed(namn);
+        //    foreach (PodcastShow item in list)
+        //    {
+        //        listBox3.Items.Add(item.Title);
 
 
-            }
-            listBox3.Items.Add(RSSreader.GetPodcastFeed(namn));
+        //    }
+        //    listBox3.Items.Add(RSSreader.GetPodcastFeed(namn));
 
 
 
@@ -84,16 +86,16 @@ namespace GUI
         private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             {
-                var list = RSSreader.GetPodcastFeed(txtURL.Text);
-                foreach (PodcastShow item in list)
-                {
-                    if (item.Title == listBox3.SelectedItem.ToString())
-                    {
-                        listBox1.Items.Add(item.Description);
-                    }
+                //var list = RSSreader.GetPodcastFeed(txtURL.Text);
+                //foreach (PodcastShow item in list)
+                //{
+                //    if (item.Title == listBox3.SelectedItem.ToString())
+                //    {
+                //        listBox1.Items.Add(item.Description);
+                //    }
 
 
-                }
+                //}
             }
 
         }
@@ -115,29 +117,23 @@ namespace GUI
         void timer_Tick(object sender, EventArgs e)
         {
             {
-                var list = RSSreader.GetPodcastFeed(txtURL.Text);
-                listBox3.Items.Clear();
-                foreach (PodcastShow item in list)
-                {
-                    listBox3.Items.Add(item.Title);
-                }
+                //var list = RSSreader.GetPodcastFeed(txtURL.Text);
+                //listBox3.Items.Clear();
+                //foreach (PodcastShow item in list)
+                //{
+                //    listBox3.Items.Add(item.Title);
+                //}
 
                 //Call method
             }
 
         }
 
-        private void btnSpara2_Click(object sender, EventArgs e)
+        private async void btnSpara2_Click(object sender, EventArgs e)
         {
-            var list = RSSreader.GetPodcastFeed(txtURL.Text);
-            string kategorin = txtKategori.Text;
-
-            //foreach (PodcastShow item in list)
-            //    item.Kategori = kategorin;
-            //{
-            //    listBox2.Items.Add(kategorin);
-            //}
-
+            await
+                            
+               reader.sparaPodd(txtURL.Text);
 
 
         }
@@ -150,8 +146,8 @@ namespace GUI
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             {
-                var list = RSSreader.GetPodcastFeed(txtURL.Text);
-                foreach (PodcastShow item in list)
+                //var list = RSSreader.GetPodcastFeed(txtURL.Text);
+                //foreach (PodcastShow item in list)
                 {
                     //if (item.kat.Equals(listBox2.SelectedItem.ToString())) 
                     //{
@@ -165,12 +161,12 @@ namespace GUI
 
         private void btnNy2_Click(object sender, EventArgs e)
         {
-            var list = RSSreader.GetPodcastFeed(txtURL.Text);
-            var jsonSerialiser = new JsonSerializer();
-            foreach (PodcastShow item in list)
-            {
-                jsonSerialiser.Serialize(item);
-            }
+        ////    var list = RSSreader.GetPodcastFeed(txtURL.Text);
+        ////    var jsonSerialiser = new JsonSerializer();
+        ////    foreach (PodcastShow item in list)
+        ////    {
+        ////        jsonSerialiser.Serialize(item);
+        ////    }
         }
     }
 }
