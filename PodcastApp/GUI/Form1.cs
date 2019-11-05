@@ -5,11 +5,14 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.ServiceModel.Syndication;
 using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
-
+using System.Xml;
+using DocumentFormat.OpenXml.Bibliography;
 using Logic;
 using Newtonsoft.Json;
 using SharedModels;
@@ -19,6 +22,7 @@ namespace GUI
 {
     public partial class Form1 : Form
     {
+        WebClient client = new WebClient();
         Timer timer1 = new Timer();
         Timer timer2 = new Timer();
         Timer timer3 = new Timer();
@@ -32,7 +36,7 @@ namespace GUI
             timer2.Start();
             timer3.Start();
 
-
+            WebClient client = new WebClient();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -85,6 +89,7 @@ namespace GUI
 
             t.Interval = result * (60000); // specify interval time as you want
             t.Tick += new EventHandler(timer_Tick);
+
             t.Start();
         }
 
@@ -123,6 +128,28 @@ namespace GUI
 
         private void btnNy2_Click(object sender, EventArgs e)
         {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var list = reader.läsPod(txtURL.Text);
+        }
+
+        private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            reader.läsPod(txtURL.Text);
+        }
+
+        private void btnTaBort2_Click(object sender, EventArgs e)
+        {
+
+            foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory())) 
+                if(Podcast.Contains(".xml"))
+            {
+                    string bajs = Path.GetFileName(Podcast);
+                listBox1.Items.Add(bajs);
+            }
+            
         }
     }
 }

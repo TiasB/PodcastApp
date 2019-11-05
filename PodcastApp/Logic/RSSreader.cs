@@ -93,7 +93,7 @@ namespace Logic
         //        throw new Exception(ex.Message);
         //    }
         //}
-        public string SkrivPod(string url)
+        public string läsPod(string url)
         {
            
 
@@ -118,14 +118,24 @@ namespace Logic
             using (writer)
             {
                 await
-                    writer.WriteRawAsync(SkrivPod(url));
+                    writer.WriteRawAsync(läsPod(url));
                 writer.Flush();
                 writer.Close();
             }
 
 
         }
+        public string Pod(string url)
+        {
 
+
+            Stream stream = client.OpenRead(url);
+            StreamReader reader = new StreamReader(stream);
+            string xml = reader.ReadToEnd();
+            return xml;
+
+
+        }
     }
 
 }
