@@ -208,7 +208,7 @@ namespace GUI
             // 
             // btnSpara2
             // 
-            this.btnSpara2.Location = new System.Drawing.Point(140, 208);
+            this.btnSpara2.Location = new System.Drawing.Point(648, 164);
             this.btnSpara2.Margin = new System.Windows.Forms.Padding(2);
             this.btnSpara2.Name = "btnSpara2";
             this.btnSpara2.Size = new System.Drawing.Size(50, 25);

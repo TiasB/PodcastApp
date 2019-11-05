@@ -110,48 +110,29 @@ namespace GUI
 
         private async void btnSpara2_Click(object sender, EventArgs e)
         {
-           
-                try
-            { await
-                reader.sparaPodd(txtURL.Text);
-                MessageBox.Show(" Du har sparat " + txtURL.Text);
-                
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine(ex);
-            }
+            await
+
+               reader.sparaPodd(txtURL.Text);
 
 
         }
 
         private void txtKategori_TextChanged(object sender, EventArgs e)
         {
-            {
-                foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory()))
-                    if (Podcast.Contains(".xml"))
-                    {
-                    {
-                          var x = reader.läsPod(Podcast);
-                        listBox3.Items.Add(x.Kategori);
-                    }
 
-                }
-            }
         }
-        
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-    { }
+        {
+        }
 
-
-                private void btnNy2_Click(object sender, EventArgs e)
+        private void btnNy2_Click(object sender, EventArgs e)
         {
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            var list = reader.läsPod(txtURL.Text);
         }
 
         private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
