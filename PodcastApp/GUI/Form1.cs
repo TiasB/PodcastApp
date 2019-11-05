@@ -69,7 +69,7 @@ namespace GUI
                 {
                     if (item.Title == listBox3.SelectedItem.ToString())
                     {
-                        listBox1.Items.Add(item.Description);
+                        listBox4.Items.Add(item.Description);
                     }
 
 
@@ -120,7 +120,7 @@ namespace GUI
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);"saas"
+                Console.WriteLine(ex);
             }
 
         }
@@ -132,19 +132,19 @@ namespace GUI
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory()))
-            {
-                if (Podcast.Contains(listBox1.SelectedItem.ToString()))
-                {
-                    string podSpara = Path.GetFileName(Podcast);
-                    listBox2.Items.Add(podSpara);
-                }
-            }
+            //foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory()))
+            //{
+            //    if (Podcast.Contains(listBox1.SelectedItem.ToString()))
+            //    {
+            //        string podSpara = Path.GetFileName(Podcast);
+            //        listBox2.Items.Add(podSpara);
+            //    }
+            //}
         }
 
         private void btnNy2_Click(object sender, EventArgs e)
         {
-        
+
 
 
 
@@ -164,33 +164,51 @@ namespace GUI
         private void btnTaBort2_Click(object sender, EventArgs e)
         {
 
-            foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory())) 
-                if(Podcast.Contains(".xml"))
-            {
+            foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory()))
+                if (Podcast.Contains(".xml"))
+                {
                     string podSpara = Path.GetFileName(Podcast);
-                listBox1.Items.Add(podSpara);
-            }
-            
+                    listBox1.Items.Add(podSpara);
+                }
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+         {
+                //string namn = listBox1.SelectedItem.ToString();
 
+
+                //  foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory()))
+                //    if (Podcast.Contains(".xml"))
+                //    {
+                //        string podSpara = Path.GetFileName(Podcast);
+                //        listBox2.Items.Add(podSpara);
+                //    }
+
+
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            string kategorin = txtKategori.Text;
-            var list = RSSreader.GetPodcastFeed(txtURL.Text);
-            foreach (PodcastShow pod in list)
+            private void button2_Click(object sender, EventArgs e)
             {
-                pod.Kategori = kategorin;
+                string kategorin = txtKategori.Text;
+                var list = RSSreader.GetPodcastFeed(txtURL.Text);
+                foreach (PodcastShow pod in list)
+                {
+                    pod.Kategori = kategorin;
+                }
+
+                listBox2.Items.Add(kategorin);
+
+
+
             }
 
-                    listBox2.Items.Add(kategorin);
-                
-
+        private void btnTaBort1_Click(object sender, EventArgs e)
+        {
 
         }
     }
-}
+    }
+

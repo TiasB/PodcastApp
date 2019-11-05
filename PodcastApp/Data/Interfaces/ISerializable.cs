@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-public interface ISerializeable
-{
-    string Serialize();
-    void Deserialize(string serializedString);
-}
+//public interface ISerializeable
+//{
+//    string Serialize();
+//    void Deserialize(string serializedString);
+//}

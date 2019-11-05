@@ -36,7 +36,7 @@ namespace Logic
                     nypodd.Description = item.Summary.Text;
                     nypodd.Kategori = nypodd.getKategori(); //funkar men tar med <p> taggar
                     podcastlista.Add(nypodd);
-                    string x = podcastlista.ToString();
+                   
                     
                 }
 
@@ -115,10 +115,10 @@ namespace Logic
 
             XmlWriterSettings setting = new XmlWriterSettings();
             setting.Async= true;
-            Deserialize<PodcastShow<GetPodcastFeed>>(url);
+            //Deserialize<PodcastShow<GetPodcastFeed>>(url);
            
             
-            XmlWriter writer = XmlWriter.Create(feed.Title.Text + PodcastShow.Kategori + ".xml", setting) ;
+            XmlWriter writer = XmlWriter.Create(feed.Title.Text + ".xml", setting) ;
 
             using (writer)
             {
@@ -130,22 +130,22 @@ namespace Logic
 
 
         }
-    public string getkategori()
-        {
-            foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory()))
-                if (Podcast.Contains(".xml") && !Podcast.Contains("Newtonsoft"))
-                {
-                    string bajs = Path.GetFileName(Podcast);
+    //public string getkategori()
+    //    {
+    //        foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory()))
+    //            if (Podcast.Contains(".xml") && !Podcast.Contains("Newtonsoft"))
+    //            {
+    //                string kategorinamn = Path.GetFileName(Podcast);
 
-                    return bajs;
+    //                return kategorinamn;
                     
                    
 
-            }
+    //        }
             
             
             
-        }
+    //    }
 
 
         public string Pod(string url)
