@@ -47,15 +47,17 @@ namespace GUI
             this.btnNy2 = new System.Windows.Forms.Button();
             this.btnSpara2 = new System.Windows.Forms.Button();
             this.btnTaBort2 = new System.Windows.Forms.Button();
+            this.listBox4 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(18, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 20);
+            this.label1.Size = new System.Drawing.Size(120, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Podcasts";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -63,18 +65,18 @@ namespace GUI
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(21, 30);
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(32, 46);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(329, 108);
+            this.listBox1.Size = new System.Drawing.Size(492, 164);
             this.listBox1.TabIndex = 1;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // btnNy1
             // 
-            this.btnNy1.Location = new System.Drawing.Point(48, 197);
-            this.btnNy1.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNy1.Location = new System.Drawing.Point(72, 303);
             this.btnNy1.Name = "btnNy1";
-            this.btnNy1.Size = new System.Drawing.Size(87, 23);
+            this.btnNy1.Size = new System.Drawing.Size(130, 35);
             this.btnNy1.TabIndex = 2;
             this.btnNy1.Text = "...Ny";
             this.btnNy1.UseVisualStyleBackColor = true;
@@ -82,10 +84,9 @@ namespace GUI
             // 
             // btnSpara1
             // 
-            this.btnSpara1.Location = new System.Drawing.Point(171, 197);
-            this.btnSpara1.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSpara1.Location = new System.Drawing.Point(256, 303);
             this.btnSpara1.Name = "btnSpara1";
-            this.btnSpara1.Size = new System.Drawing.Size(81, 23);
+            this.btnSpara1.Size = new System.Drawing.Size(122, 35);
             this.btnSpara1.TabIndex = 3;
             this.btnSpara1.Text = "Spara";
             this.btnSpara1.UseVisualStyleBackColor = true;
@@ -93,10 +94,9 @@ namespace GUI
             // 
             // btnTaBort1
             // 
-            this.btnTaBort1.Location = new System.Drawing.Point(269, 197);
-            this.btnTaBort1.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTaBort1.Location = new System.Drawing.Point(404, 303);
             this.btnTaBort1.Name = "btnTaBort1";
-            this.btnTaBort1.Size = new System.Drawing.Size(81, 23);
+            this.btnTaBort1.Size = new System.Drawing.Size(122, 35);
             this.btnTaBort1.TabIndex = 4;
             this.btnTaBort1.Text = "Ta bort";
             this.btnTaBort1.UseVisualStyleBackColor = true;
@@ -108,100 +108,90 @@ namespace GUI
             "5",
             "30",
             "60"});
-            this.cboUppdateringsfrekverns.Location = new System.Drawing.Point(171, 175);
-            this.cboUppdateringsfrekverns.Margin = new System.Windows.Forms.Padding(2);
+            this.cboUppdateringsfrekverns.Location = new System.Drawing.Point(256, 269);
             this.cboUppdateringsfrekverns.Name = "cboUppdateringsfrekverns";
-            this.cboUppdateringsfrekverns.Size = new System.Drawing.Size(82, 21);
+            this.cboUppdateringsfrekverns.Size = new System.Drawing.Size(121, 28);
             this.cboUppdateringsfrekverns.TabIndex = 6;
             this.cboUppdateringsfrekverns.Text = "(Minuter)";
-            this.cboUppdateringsfrekverns.SelectedIndexChanged += new System.EventHandler(this.cboUppdateringsfrekverns_SelectedIndexChanged);
             // 
             // cboKategori
             // 
             this.cboKategori.FormattingEnabled = true;
-            this.cboKategori.Location = new System.Drawing.Point(269, 175);
-            this.cboKategori.Margin = new System.Windows.Forms.Padding(2);
+            this.cboKategori.Location = new System.Drawing.Point(404, 269);
             this.cboKategori.Name = "cboKategori";
-            this.cboKategori.Size = new System.Drawing.Size(82, 21);
+            this.cboKategori.Size = new System.Drawing.Size(121, 28);
             this.cboKategori.TabIndex = 7;
             this.cboKategori.SelectedIndexChanged += new System.EventHandler(this.cboKategori_SelectedIndexChanged);
             // 
             // txtURL
             // 
-            this.txtURL.Location = new System.Drawing.Point(12, 176);
-            this.txtURL.Margin = new System.Windows.Forms.Padding(2);
+            this.txtURL.Location = new System.Drawing.Point(18, 271);
             this.txtURL.Name = "txtURL";
             this.txtURL.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtURL.Size = new System.Drawing.Size(157, 20);
+            this.txtURL.Size = new System.Drawing.Size(234, 26);
             this.txtURL.TabIndex = 8;
             this.txtURL.Text = "http://borssnack.libsyn.com/rss";
-            this.txtURL.TextChanged += new System.EventHandler(this.txtURL_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 155);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(72, 238);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.Size = new System.Drawing.Size(46, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = ":URL";
             // 
             // lblUppdateringsfrekvens
             // 
             this.lblUppdateringsfrekvens.AutoSize = true;
-            this.lblUppdateringsfrekvens.Location = new System.Drawing.Point(171, 155);
-            this.lblUppdateringsfrekvens.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUppdateringsfrekvens.Location = new System.Drawing.Point(256, 238);
             this.lblUppdateringsfrekvens.Name = "lblUppdateringsfrekvens";
-            this.lblUppdateringsfrekvens.Size = new System.Drawing.Size(114, 13);
+            this.lblUppdateringsfrekvens.Size = new System.Drawing.Size(169, 20);
             this.lblUppdateringsfrekvens.TabIndex = 10;
             this.lblUppdateringsfrekvens.Text = ":Uppdateringsfrekvens";
             // 
             // lblKategori
             // 
             this.lblKategori.AutoSize = true;
-            this.lblKategori.Location = new System.Drawing.Point(288, 155);
-            this.lblKategori.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblKategori.Location = new System.Drawing.Point(432, 238);
             this.lblKategori.Name = "lblKategori";
-            this.lblKategori.Size = new System.Drawing.Size(49, 13);
+            this.lblKategori.Size = new System.Drawing.Size(72, 20);
             this.lblKategori.TabIndex = 11;
             this.lblKategori.Text = ":Kategori";
             // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(532, 17);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox2.ItemHeight = 20;
+            this.listBox2.Location = new System.Drawing.Point(798, 26);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(286, 121);
+            this.listBox2.Size = new System.Drawing.Size(427, 184);
             this.listBox2.TabIndex = 12;
             this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // listBox3
             // 
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(12, 237);
-            this.listBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox3.ItemHeight = 20;
+            this.listBox3.Location = new System.Drawing.Point(18, 365);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(360, 134);
+            this.listBox3.Size = new System.Drawing.Size(538, 204);
             this.listBox3.TabIndex = 13;
             this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
             // txtKategori
             // 
-            this.txtKategori.Location = new System.Drawing.Point(532, 142);
-            this.txtKategori.Margin = new System.Windows.Forms.Padding(2);
+            this.txtKategori.Location = new System.Drawing.Point(798, 218);
             this.txtKategori.Name = "txtKategori";
-            this.txtKategori.Size = new System.Drawing.Size(286, 20);
+            this.txtKategori.Size = new System.Drawing.Size(427, 26);
             this.txtKategori.TabIndex = 14;
             this.txtKategori.TextChanged += new System.EventHandler(this.txtKategori_TextChanged);
             // 
             // btnNy2
             // 
-            this.btnNy2.Location = new System.Drawing.Point(556, 164);
-            this.btnNy2.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNy2.Location = new System.Drawing.Point(834, 252);
             this.btnNy2.Name = "btnNy2";
-            this.btnNy2.Size = new System.Drawing.Size(50, 25);
+            this.btnNy2.Size = new System.Drawing.Size(75, 38);
             this.btnNy2.TabIndex = 15;
             this.btnNy2.Text = "...Ny";
             this.btnNy2.UseVisualStyleBackColor = true;
@@ -209,10 +199,9 @@ namespace GUI
             // 
             // btnSpara2
             // 
-            this.btnSpara2.Location = new System.Drawing.Point(648, 164);
-            this.btnSpara2.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSpara2.Location = new System.Drawing.Point(972, 252);
             this.btnSpara2.Name = "btnSpara2";
-            this.btnSpara2.Size = new System.Drawing.Size(50, 25);
+            this.btnSpara2.Size = new System.Drawing.Size(75, 38);
             this.btnSpara2.TabIndex = 16;
             this.btnSpara2.Text = "Spara";
             this.btnSpara2.UseVisualStyleBackColor = true;
@@ -220,20 +209,29 @@ namespace GUI
             // 
             // btnTaBort2
             // 
-            this.btnTaBort2.Location = new System.Drawing.Point(753, 164);
-            this.btnTaBort2.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTaBort2.Location = new System.Drawing.Point(1130, 252);
             this.btnTaBort2.Name = "btnTaBort2";
-            this.btnTaBort2.Size = new System.Drawing.Size(50, 25);
+            this.btnTaBort2.Size = new System.Drawing.Size(75, 38);
             this.btnTaBort2.TabIndex = 17;
             this.btnTaBort2.Text = "Ta bort";
             this.btnTaBort2.UseVisualStyleBackColor = true;
             // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.ItemHeight = 20;
+            this.listBox4.Location = new System.Drawing.Point(798, 365);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(407, 224);
+            this.listBox4.TabIndex = 18;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(875, 428);
+            this.ClientSize = new System.Drawing.Size(1312, 658);
+            this.Controls.Add(this.listBox4);
             this.Controls.Add(this.btnTaBort2);
             this.Controls.Add(this.btnSpara2);
             this.Controls.Add(this.btnNy2);
@@ -251,7 +249,6 @@ namespace GUI
             this.Controls.Add(this.btnNy1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "PodcastApp";
@@ -285,6 +282,7 @@ namespace GUI
         private System.Windows.Forms.Button btnNy2;
         private System.Windows.Forms.Button btnSpara2;
         private System.Windows.Forms.Button btnTaBort2;
+        private System.Windows.Forms.ListBox listBox4;
     }
 }
 
