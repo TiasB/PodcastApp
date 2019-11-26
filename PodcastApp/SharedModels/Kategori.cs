@@ -18,21 +18,17 @@ namespace SharedModels
 
         }
         public static List<Kategori> AddkategoriToList(string Kategorinamnet)
-        {
+        {  Kategori kategorin = new Kategori();
             List<Kategori> kategorilista = new List<Kategori>();
 
-            foreach (kategorinamnet in kategorilista)
+            foreach (Kategori x in kategorilista)
             {
-                Kategori kategorin = new Kategori();
+                
 
-                count++;
-                nypodd.Title += item.Title.Text; //funkar
-                nypodd.Url += item.Links[0].Uri.OriginalString; //funkar
-                nypodd.Description = item.Summary.Text;
-                nypodd.Kategori = nypodd.getKategori(); //funkar men tar med <p> taggar
-                podcastlista.Add(nypodd);
+                kategorilista.Add(kategorin);
 
             }
+            return kategorilista;
         }
     }
 }
