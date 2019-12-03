@@ -37,6 +37,9 @@ namespace GUI
             timer1.Start();
             timer2.Start();
             timer3.Start();
+            SerDeser = new SerializedReaderWriter();
+            logik = new Logik();
+
 
             WebClient client = new WebClient();
         }
@@ -198,6 +201,7 @@ namespace GUI
             logik.nyKategori(category);
             logik.saveCategoryList();
             listBox2.Items.Add(category);
+            cboKategori.Items.Add(txtKategori.Text);
 
             }
 

@@ -74,12 +74,12 @@ namespace GUI
             // 
             // btnNy1
             // 
-            this.btnNy1.Location = new System.Drawing.Point(48, 184);
+            this.btnNy1.Location = new System.Drawing.Point(9, 181);
             this.btnNy1.Margin = new System.Windows.Forms.Padding(2);
             this.btnNy1.Name = "btnNy1";
-            this.btnNy1.Size = new System.Drawing.Size(87, 23);
+            this.btnNy1.Size = new System.Drawing.Size(126, 23);
             this.btnNy1.TabIndex = 2;
-            this.btnNy1.Text = "...Ny";
+            this.btnNy1.Text = "Add PodcastShow";
             this.btnNy1.UseVisualStyleBackColor = true;
             this.btnNy1.Click += new System.EventHandler(this.btnNy1_Click);
             // 
@@ -88,7 +88,7 @@ namespace GUI
             this.btnSpara1.Location = new System.Drawing.Point(171, 185);
             this.btnSpara1.Margin = new System.Windows.Forms.Padding(2);
             this.btnSpara1.Name = "btnSpara1";
-            this.btnSpara1.Size = new System.Drawing.Size(81, 23);
+            this.btnSpara1.Size = new System.Drawing.Size(81, 27);
             this.btnSpara1.TabIndex = 3;
             this.btnSpara1.Text = "Spara";
             this.btnSpara1.UseVisualStyleBackColor = true;
@@ -112,7 +112,7 @@ namespace GUI
             "5",
             "30",
             "60"});
-            this.cboUppdateringsfrekverns.Location = new System.Drawing.Point(170, 160);
+            this.cboUppdateringsfrekverns.Location = new System.Drawing.Point(171, 159);
             this.cboUppdateringsfrekverns.Margin = new System.Windows.Forms.Padding(2);
             this.cboUppdateringsfrekverns.Name = "cboUppdateringsfrekverns";
             this.cboUppdateringsfrekverns.Size = new System.Drawing.Size(82, 21);
@@ -122,7 +122,7 @@ namespace GUI
             // cboKategori
             // 
             this.cboKategori.FormattingEnabled = true;
-            this.cboKategori.Location = new System.Drawing.Point(269, 164);
+            this.cboKategori.Location = new System.Drawing.Point(268, 160);
             this.cboKategori.Margin = new System.Windows.Forms.Padding(2);
             this.cboKategori.Name = "cboKategori";
             this.cboKategori.Size = new System.Drawing.Size(82, 21);
@@ -212,7 +212,7 @@ namespace GUI
             // 
             // btnSpara2
             // 
-            this.btnSpara2.Location = new System.Drawing.Point(139, 207);
+            this.btnSpara2.Location = new System.Drawing.Point(155, 212);
             this.btnSpara2.Margin = new System.Windows.Forms.Padding(2);
             this.btnSpara2.Name = "btnSpara2";
             this.btnSpara2.Size = new System.Drawing.Size(50, 25);
@@ -226,9 +226,9 @@ namespace GUI
             this.btnTaBort2.Location = new System.Drawing.Point(355, 30);
             this.btnTaBort2.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaBort2.Name = "btnTaBort2";
-            this.btnTaBort2.Size = new System.Drawing.Size(97, 25);
+            this.btnTaBort2.Size = new System.Drawing.Size(130, 25);
             this.btnTaBort2.TabIndex = 17;
-            this.btnTaBort2.Text = "Podcasts";
+            this.btnTaBort2.Text = "Show pocast feeds";
             this.btnTaBort2.UseVisualStyleBackColor = true;
             this.btnTaBort2.Click += new System.EventHandler(this.btnTaBort2_Click);
             // 
@@ -244,7 +244,7 @@ namespace GUI
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(48, 209);
+            this.button1.Location = new System.Drawing.Point(36, 214);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 23);
             this.button1.TabIndex = 19;
@@ -257,9 +257,9 @@ namespace GUI
             this.button2.Location = new System.Drawing.Point(653, 164);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(73, 24);
+            this.button2.Size = new System.Drawing.Size(165, 24);
             this.button2.TabIndex = 20;
-            this.button2.Text = "Ge kategori";
+            this.button2.Text = "Skapa kategori";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
