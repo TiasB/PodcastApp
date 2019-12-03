@@ -13,7 +13,7 @@ using System.ServiceModel.Syndication;
 
 namespace Data
 {
-    class SerializedReaderWriter
+   public class SerializedReaderWriter
     {
 
 
@@ -57,12 +57,12 @@ namespace Data
                 TypeNameHandling = TypeNameHandling.All
             };
         }
-        public void Serialize(string filename, List<PodcastShow> Lists) { 
+        public void Serialize(List<PodcastShow> Lists) { 
 
             try
             {
                 var serializer = CreateSerializer();
-                using (var sw = new StreamWriter(filename))
+                using (var sw = new StreamWriter("savedpodcasts.Json"))
                 {
                     using (var jw = new JsonTextWriter(sw))
                     {
@@ -71,13 +71,33 @@ namespace Data
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw new Exception(filename);
+                
+            }
+        }
+        public void SerializeCategory(List<Kategori> CategoryList)
+        {
+
+            try
+            {
+                var serializer = CreateSerializer();
+                using (var sw = new StreamWriter("savedcategorys.Json"))
+                {
+                    using (var jw = new JsonTextWriter(sw))
+                    {
+                        serializer.Formatting = Newtonsoft.Json.Formatting.Indented;
+                        serializer.Serialize(jw, CategoryList);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
             }
         }
 
-        public List<PodcastShow> Deserialize<PodcastShow>(string filename)
+        public void Deserialize<PodcastShow>(string filename)
         {
             try
             {
