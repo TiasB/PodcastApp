@@ -24,7 +24,6 @@ namespace Data
         {
             var count = 0;
             List<PodcastShow> podcastlista = new List<PodcastShow>();
-            //string rssfeedurl = "http://borssnack.libsyn.com/rss";
             using (XmlReader reader = XmlReader.Create(url))
             {
                 SyndicationFeed feed = SyndicationFeed.Load(reader);
@@ -58,10 +57,8 @@ namespace Data
                 TypeNameHandling = TypeNameHandling.All
             };
         }
-        public void Serialize<PodcashShow>(string filename, List<PodcastShow> Lists)
+        public void Serialize(string filename, List<PodcastShow> Lists) { 
 
-        {
-            PodcastShow Podcast = new PodcastShow();
             try
             {
                 var serializer = CreateSerializer();
@@ -70,7 +67,7 @@ namespace Data
                     using (var jw = new JsonTextWriter(sw))
                     {
                         serializer.Formatting = Newtonsoft.Json.Formatting.Indented;
-                        serializer.Serialize(jw, Podcast);
+                        serializer.Serialize(jw, Lists);
                     }
                 }
             }
@@ -202,4 +199,4 @@ namespace Data
     //        }
     //    }
 }
-}
+
