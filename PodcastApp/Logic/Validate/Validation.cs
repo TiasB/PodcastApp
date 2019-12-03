@@ -24,6 +24,22 @@ namespace Logic.Validate
             return result;
         }
 
+        public static bool isIndexNull(string selectedItem)
+        {
+            bool result = false;
+
+            if (selectedItem == null)
+            {
+                result = false;
+            }
+            else
+            {
+                result = true;
+            }
+
+            return result;
+        }
+
 
     }
 }
