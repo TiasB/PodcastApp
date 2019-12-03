@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
 using System.Xml;
+using Data;
 using DocumentFormat.OpenXml.Bibliography;
 using Logic;
 using Newtonsoft.Json;
@@ -27,7 +28,8 @@ namespace GUI
         Timer timer2 = new Timer();
         Timer timer3 = new Timer();
 
-        RSSreader reader = new RSSreader();
+        public SerializedReaderWriter SerDeser { get; set; }
+        public Logik logik { get; set; }
 
         public Form1()
         {
@@ -52,19 +54,19 @@ namespace GUI
         private void btnNy1_Click(object sender, EventArgs e)
         {
             string namn = txtURL.Text;
-            var list = RSSreader.GetPodcastFeed(namn);
+            var list = SerializedReaderWriter.GetPodcastFeed(namn);
             foreach (PodcastShow item in list)
             {
                 listBox3.Items.Add(item.Title);
 
 
             }
-            listBox3.Items.Add(RSSreader.GetPodcastFeed(namn));
+            listBox3.Items.Add(SerializedReaderWriter.GetPodcastFeed(namn));
         }
         private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             {
-                var list = RSSreader.GetPodcastFeed(txtURL.Text);
+                var list = SerializedReaderWriter.GetPodcastFeed(txtURL.Text);
                 foreach (PodcastShow item in list)
                 {
                     if (item.Title == listBox3.SelectedItem.ToString())
@@ -96,7 +98,7 @@ namespace GUI
         void timer_Tick(object sender, EventArgs e)
         {
             {
-                var list = RSSreader.GetPodcastFeed(txtURL.Text);
+                var list = SerializedReaderWriter.GetPodcastFeed(txtURL.Text);
                 listBox3.Items.Clear();
                 foreach (PodcastShow item in list)
                 {
@@ -114,7 +116,7 @@ namespace GUI
             try
             {
                 await
-                  reader.sparaPodd(txtURL.Text);
+                  SerDeser.sparaPodd(txtURL.Text);
                 MessageBox.Show(" Du har sparat " + txtURL.Text);
 
             }
@@ -153,12 +155,12 @@ namespace GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var list = reader.läsPod(txtURL.Text);
+            var list = SerDeser.läsPod(txtURL.Text);
         }
 
         private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            reader.läsPod(txtURL.Text);
+            SerDeser.läsPod(txtURL.Text);
         }
 
         private void btnTaBort2_Click(object sender, EventArgs e)
@@ -192,20 +194,19 @@ namespace GUI
 
             private void button2_Click(object sender, EventArgs e)
             {
-                string kategorin = txtKategori.Text;
-                var list = RSSreader.GetPodcastFeed(txtURL.Text);
-                foreach (PodcastShow pod in list)
-                {
-                    pod.Kategori = kategorin;
-                }
-
-                listBox2.Items.Add(kategorin);
-
-
+            var category = txtKategori.Text;
+            logik.nyKategori(category);
+            logik.saveCategoryList();
+            listBox2.Items.Add(category);
 
             }
 
         private void btnTaBort1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtURL_TextChanged(object sender, EventArgs e)
         {
 
         }

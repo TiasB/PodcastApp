@@ -137,6 +137,8 @@ namespace GUI
             this.txtURL.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtURL.Size = new System.Drawing.Size(157, 20);
             this.txtURL.TabIndex = 8;
+            this.txtURL.Text = "http://tuttobalutto.libsyn.com/rss";
+            this.txtURL.TextChanged += new System.EventHandler(this.txtURL_TextChanged);
             // 
             // label2
             // 

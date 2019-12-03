@@ -14,11 +14,13 @@ namespace Logic
     public class Logik
     {
         public List<Kategori> allaKategorier { get; set; }
+        public SerializedReaderWriter SerDeser { get; set; }
 
 
         public Logik()
         {
             allaKategorier = new List<Kategori>();
+            SerDeser = new SerializedReaderWriter();
 
         }
 
@@ -32,10 +34,11 @@ namespace Logic
         {
             allaKategorier.Add(nykategori);
         }
-        public void bajs(string bajs)
+        public void saveCategoryList()
         {
-            Console.WriteLine(bajs);
+            SerDeser.SerializeCategory(allaKategorier);
         }
+ 
     }//logik
 
 }

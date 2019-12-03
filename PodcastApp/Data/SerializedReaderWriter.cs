@@ -107,7 +107,7 @@ namespace Data
                     using (var jr = new JsonTextReader(sr))
                     {
                         var list = serializer.Deserialize<List<PodcastShow>>(jr);
-                        return list;
+                       
                     }
                 }
             }
