@@ -152,8 +152,6 @@ namespace GUI
 
 
 
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -213,6 +211,23 @@ namespace GUI
         private void txtURL_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void lvPodcastShow_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            {
+                //string namn = listBox1.SelectedItem.ToString();
+
+
+                //  foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory()))
+                //    if (Podcast.Contains(".xml"))
+                //    {
+                //        string podSpara = Path.GetFileName(Podcast);
+                //        listBox2.Items.Add(podSpara);
+                //    }
+
+
+            }
         }
     }
     }
