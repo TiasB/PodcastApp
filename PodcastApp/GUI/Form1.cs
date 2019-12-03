@@ -115,7 +115,7 @@ namespace GUI
 
         private async void btnSpara2_Click(object sender, EventArgs e)
         {
-
+            
             try
             {
                 await
@@ -127,6 +127,7 @@ namespace GUI
             {
                 Console.WriteLine(ex);
             }
+            
 
         }
 
