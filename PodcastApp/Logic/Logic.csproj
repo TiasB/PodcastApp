@@ -50,17 +50,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="RSSreader.cs" />
-    <Compile Include="Logic.cs" />
+    <Compile Include="Logik.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Data\Data.csproj">
       <Project>{c83613d4-d908-43dd-8cc0-54cee550c5c5}</Project>
       <Name>Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SharedModels\SharedModels.csproj">
-      <Project>{DB999D0F-7A72-4C95-95F5-844E27335BFF}</Project>
-      <Name>SharedModels</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
