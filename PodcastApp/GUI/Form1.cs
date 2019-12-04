@@ -167,7 +167,7 @@ namespace GUI
 
         private void btnTaBort2_Click(object sender, EventArgs e)
         {
-
+           
             foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory()))
                 if (Podcast.Contains(".xml"))
                 {

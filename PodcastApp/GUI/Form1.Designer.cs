@@ -31,7 +31,7 @@ namespace GUI
         private void InitializeComponent()
         {
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblHeader = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnNy1 = new System.Windows.Forms.Button();
             this.btnSpara1 = new System.Windows.Forms.Button();
@@ -47,7 +47,7 @@ namespace GUI
             this.txtKategori = new System.Windows.Forms.TextBox();
             this.btnNy2 = new System.Windows.Forms.Button();
             this.btnSpara2 = new System.Windows.Forms.Button();
-            this.btnTaBort2 = new System.Windows.Forms.Button();
+            this.btnShowPodcasts = new System.Windows.Forms.Button();
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -56,19 +56,25 @@ namespace GUI
             this.Episodes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Updatesetting = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Category = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.episodesColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.categoryColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.lblDescription = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // lblHeader
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Podcasts";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Location = new System.Drawing.Point(18, 14);
+            this.lblHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(133, 29);
+            this.lblHeader.TabIndex = 0;
+            this.lblHeader.Text = "AmeriCast";
+            this.lblHeader.Click += new System.EventHandler(this.label1_Click);
             // 
             // listBox1
             // 
@@ -174,9 +180,9 @@ namespace GUI
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 20;
-            this.listBox2.Location = new System.Drawing.Point(798, 26);
+            this.listBox2.Location = new System.Drawing.Point(684, 230);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(427, 184);
+            this.listBox2.Size = new System.Drawing.Size(86, 44);
             this.listBox2.TabIndex = 12;
             this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
@@ -194,13 +200,13 @@ namespace GUI
             // 
             this.txtKategori.Location = new System.Drawing.Point(798, 218);
             this.txtKategori.Name = "txtKategori";
-            this.txtKategori.Size = new System.Drawing.Size(427, 26);
+            this.txtKategori.Size = new System.Drawing.Size(408, 26);
             this.txtKategori.TabIndex = 14;
             this.txtKategori.TextChanged += new System.EventHandler(this.txtKategori_TextChanged);
             // 
             // btnNy2
             // 
-            this.btnNy2.Location = new System.Drawing.Point(834, 252);
+            this.btnNy2.Location = new System.Drawing.Point(798, 252);
             this.btnNy2.Name = "btnNy2";
             this.btnNy2.Size = new System.Drawing.Size(124, 38);
             this.btnNy2.TabIndex = 15;
@@ -210,7 +216,7 @@ namespace GUI
             // 
             // btnSpara2
             // 
-            this.btnSpara2.Location = new System.Drawing.Point(232, 326);
+            this.btnSpara2.Location = new System.Drawing.Point(191, 327);
             this.btnSpara2.Name = "btnSpara2";
             this.btnSpara2.Size = new System.Drawing.Size(75, 38);
             this.btnSpara2.TabIndex = 16;
@@ -218,23 +224,23 @@ namespace GUI
             this.btnSpara2.UseVisualStyleBackColor = true;
             this.btnSpara2.Click += new System.EventHandler(this.btnSpara2_Click);
             // 
-            // btnTaBort2
+            // btnShowPodcasts
             // 
-            this.btnTaBort2.Location = new System.Drawing.Point(182, 12);
-            this.btnTaBort2.Name = "btnTaBort2";
-            this.btnTaBort2.Size = new System.Drawing.Size(195, 38);
-            this.btnTaBort2.TabIndex = 17;
-            this.btnTaBort2.Text = "Show pocast feeds";
-            this.btnTaBort2.UseVisualStyleBackColor = true;
-            this.btnTaBort2.Click += new System.EventHandler(this.btnTaBort2_Click);
+            this.btnShowPodcasts.Location = new System.Drawing.Point(182, 12);
+            this.btnShowPodcasts.Name = "btnShowPodcasts";
+            this.btnShowPodcasts.Size = new System.Drawing.Size(195, 38);
+            this.btnShowPodcasts.TabIndex = 17;
+            this.btnShowPodcasts.Text = "Show pocast feeds";
+            this.btnShowPodcasts.UseVisualStyleBackColor = true;
+            this.btnShowPodcasts.Click += new System.EventHandler(this.btnTaBort2_Click);
             // 
             // listBox4
             // 
             this.listBox4.FormattingEnabled = true;
             this.listBox4.ItemHeight = 20;
-            this.listBox4.Location = new System.Drawing.Point(798, 365);
+            this.listBox4.Location = new System.Drawing.Point(684, 283);
             this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(408, 224);
+            this.listBox4.Size = new System.Drawing.Size(86, 64);
             this.listBox4.TabIndex = 18;
             this.listBox4.SelectedIndexChanged += new System.EventHandler(this.listBox4_SelectedIndexChanged);
             // 
@@ -251,7 +257,7 @@ namespace GUI
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(980, 252);
+            this.button2.Location = new System.Drawing.Point(958, 253);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(248, 37);
             this.button2.TabIndex = 20;
@@ -297,17 +303,72 @@ namespace GUI
             this.Category.Text = "Category";
             this.Category.Width = 110;
             // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.episodesColumn});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(12, 466);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(538, 224);
+            this.listView1.TabIndex = 22;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // episodesColumn
+            // 
+            this.episodesColumn.Text = "Episodes";
+            this.episodesColumn.Width = 500;
+            // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.categoryColumn});
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(798, 57);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(408, 155);
+            this.listView2.TabIndex = 23;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // categoryColumn
+            // 
+            this.categoryColumn.Text = "Category";
+            this.categoryColumn.Width = 200;
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Location = new System.Drawing.Point(798, 466);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(408, 224);
+            this.txtDescription.TabIndex = 24;
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Location = new System.Drawing.Point(798, 432);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(148, 20);
+            this.lblDescription.TabIndex = 25;
+            this.lblDescription.Text = "Episode description";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1312, 658);
+            this.ClientSize = new System.Drawing.Size(1299, 693);
+            this.Controls.Add(this.lblDescription);
+            this.Controls.Add(this.txtDescription);
+            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.lvPodcastShow);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox4);
-            this.Controls.Add(this.btnTaBort2);
+            this.Controls.Add(this.btnShowPodcasts);
             this.Controls.Add(this.btnSpara2);
             this.Controls.Add(this.btnNy2);
             this.Controls.Add(this.txtKategori);
@@ -323,7 +384,7 @@ namespace GUI
             this.Controls.Add(this.btnSpara1);
             this.Controls.Add(this.btnNy1);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblHeader);
             this.Name = "Form1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "PodcastApp";
@@ -340,7 +401,7 @@ namespace GUI
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button btnNy1;
         private System.Windows.Forms.Button btnSpara1;
@@ -356,7 +417,7 @@ namespace GUI
         private System.Windows.Forms.TextBox txtKategori;
         private System.Windows.Forms.Button btnNy2;
         private System.Windows.Forms.Button btnSpara2;
-        private System.Windows.Forms.Button btnTaBort2;
+        private System.Windows.Forms.Button btnShowPodcasts;
         private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -365,6 +426,12 @@ namespace GUI
         private System.Windows.Forms.ColumnHeader PodcastShow;
         private System.Windows.Forms.ColumnHeader Episodes;
         private System.Windows.Forms.ColumnHeader Category;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader episodesColumn;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader categoryColumn;
+        private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.Label lblDescription;
     }
 }
 
