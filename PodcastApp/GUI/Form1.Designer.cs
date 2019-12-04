@@ -44,13 +44,13 @@ namespace GUI
             this.lblKategori = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox3 = new System.Windows.Forms.ListBox();
-            this.txtKategori = new System.Windows.Forms.TextBox();
-            this.btnNy2 = new System.Windows.Forms.Button();
+            this.txtCategory = new System.Windows.Forms.TextBox();
+            this.btnModifyCategory = new System.Windows.Forms.Button();
             this.btnSpara2 = new System.Windows.Forms.Button();
             this.btnShowPodcasts = new System.Windows.Forms.Button();
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCreateCategory = new System.Windows.Forms.Button();
             this.lvPodcastShow = new System.Windows.Forms.ListView();
             this.PodcastShow = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Episodes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -58,10 +58,11 @@ namespace GUI
             this.Category = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView1 = new System.Windows.Forms.ListView();
             this.episodesColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.lvCategory = new System.Windows.Forms.ListView();
             this.categoryColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.lblDescription = new System.Windows.Forms.Label();
+            this.btnRemoveCategory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblHeader
@@ -196,23 +197,23 @@ namespace GUI
             this.listBox3.TabIndex = 13;
             this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
-            // txtKategori
+            // txtCategory
             // 
-            this.txtKategori.Location = new System.Drawing.Point(798, 217);
-            this.txtKategori.Name = "txtKategori";
-            this.txtKategori.Size = new System.Drawing.Size(408, 26);
-            this.txtKategori.TabIndex = 14;
-            this.txtKategori.TextChanged += new System.EventHandler(this.txtKategori_TextChanged);
+            this.txtCategory.Location = new System.Drawing.Point(798, 217);
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.Size = new System.Drawing.Size(408, 26);
+            this.txtCategory.TabIndex = 14;
+            this.txtCategory.TextChanged += new System.EventHandler(this.txtKategori_TextChanged);
             // 
-            // btnNy2
+            // btnModifyCategory
             // 
-            this.btnNy2.Location = new System.Drawing.Point(798, 252);
-            this.btnNy2.Name = "btnNy2";
-            this.btnNy2.Size = new System.Drawing.Size(124, 38);
-            this.btnNy2.TabIndex = 15;
-            this.btnNy2.Text = "Spara kategori";
-            this.btnNy2.UseVisualStyleBackColor = true;
-            this.btnNy2.Click += new System.EventHandler(this.btnNy2_Click);
+            this.btnModifyCategory.Location = new System.Drawing.Point(1123, 249);
+            this.btnModifyCategory.Name = "btnModifyCategory";
+            this.btnModifyCategory.Size = new System.Drawing.Size(120, 38);
+            this.btnModifyCategory.TabIndex = 15;
+            this.btnModifyCategory.Text = "Modify";
+            this.btnModifyCategory.UseVisualStyleBackColor = true;
+            this.btnModifyCategory.Click += new System.EventHandler(this.btnNy2_Click);
             // 
             // btnSpara2
             // 
@@ -255,15 +256,15 @@ namespace GUI
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnCreateCategory
             // 
-            this.button2.Location = new System.Drawing.Point(958, 253);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(248, 37);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Skapa kategori";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnCreateCategory.Location = new System.Drawing.Point(798, 249);
+            this.btnCreateCategory.Name = "btnCreateCategory";
+            this.btnCreateCategory.Size = new System.Drawing.Size(90, 37);
+            this.btnCreateCategory.TabIndex = 20;
+            this.btnCreateCategory.Text = "Create";
+            this.btnCreateCategory.UseVisualStyleBackColor = true;
+            this.btnCreateCategory.Click += new System.EventHandler(this.button2_Click);
             // 
             // lvPodcastShow
             // 
@@ -320,17 +321,18 @@ namespace GUI
             this.episodesColumn.Text = "Episodes";
             this.episodesColumn.Width = 500;
             // 
-            // listView2
+            // lvCategory
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvCategory.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.categoryColumn});
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(798, 12);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(408, 155);
-            this.listView2.TabIndex = 23;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            this.lvCategory.HideSelection = false;
+            this.lvCategory.Location = new System.Drawing.Point(798, 12);
+            this.lvCategory.Name = "lvCategory";
+            this.lvCategory.Size = new System.Drawing.Size(408, 155);
+            this.lvCategory.TabIndex = 23;
+            this.lvCategory.UseCompatibleStateImageBehavior = false;
+            this.lvCategory.View = System.Windows.Forms.View.Details;
+            this.lvCategory.SelectedIndexChanged += new System.EventHandler(this.lvCategory_SelectedIndexChanged);
             // 
             // categoryColumn
             // 
@@ -354,24 +356,34 @@ namespace GUI
             this.lblDescription.TabIndex = 25;
             this.lblDescription.Text = "Episode description";
             // 
+            // btnRemoveCategory
+            // 
+            this.btnRemoveCategory.Location = new System.Drawing.Point(949, 251);
+            this.btnRemoveCategory.Name = "btnRemoveCategory";
+            this.btnRemoveCategory.Size = new System.Drawing.Size(111, 36);
+            this.btnRemoveCategory.TabIndex = 26;
+            this.btnRemoveCategory.Text = "Remove";
+            this.btnRemoveCategory.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1299, 693);
+            this.Controls.Add(this.btnRemoveCategory);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.txtDescription);
-            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.lvCategory);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.lvPodcastShow);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCreateCategory);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox4);
             this.Controls.Add(this.btnShowPodcasts);
             this.Controls.Add(this.btnSpara2);
-            this.Controls.Add(this.btnNy2);
-            this.Controls.Add(this.txtKategori);
+            this.Controls.Add(this.btnModifyCategory);
+            this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.lblKategori);
@@ -414,13 +426,13 @@ namespace GUI
         private System.Windows.Forms.Label lblKategori;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.TextBox txtKategori;
-        private System.Windows.Forms.Button btnNy2;
+        private System.Windows.Forms.TextBox txtCategory;
+        private System.Windows.Forms.Button btnModifyCategory;
         private System.Windows.Forms.Button btnSpara2;
         private System.Windows.Forms.Button btnShowPodcasts;
         private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCreateCategory;
         private System.Windows.Forms.ListView lvPodcastShow;
         private System.Windows.Forms.ColumnHeader Updatesetting;
         private System.Windows.Forms.ColumnHeader PodcastShow;
@@ -428,10 +440,11 @@ namespace GUI
         private System.Windows.Forms.ColumnHeader Category;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader episodesColumn;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView lvCategory;
         private System.Windows.Forms.ColumnHeader categoryColumn;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label lblDescription;
+        private System.Windows.Forms.Button btnRemoveCategory;
     }
 }
 

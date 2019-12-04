@@ -196,11 +196,11 @@ namespace GUI
 
             private void button2_Click(object sender, EventArgs e)
             {
-            var category = txtKategori.Text;
+            var category = txtCategory.Text;
             logik.nyKategori(category);
             logik.saveCategoryList();
             listBox2.Items.Add(category);
-            cboKategori.Items.Add(txtKategori.Text);
+            cboKategori.Items.Add(txtCategory.Text);
 
             }
 
@@ -215,7 +215,41 @@ namespace GUI
         }
 
         private void lvPodcastShow_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        //{
+          
+        //        try
+        //        {
+        //            var selected = lwPodcast.SelectedItems;
+        //            if (selected.Count > 0)
+        //            {
+        //                btTaBortPod.Enabled = true;
+        //                btAndraPod.Enabled = true;
+        //                lwPodAvsnitt.Items.Clear();
+        //                tbAvsnittBeskrivning.Clear();
+        //                foreach (ListViewItem item in selected)
+        //                {
+        //                    var namn = item.SubItems[0].Text;
+        //                    var allaAvsnitt = bll.getPodcastAvsnittToString(namn);
+        //                    tbUrlPod.Text = bll.getUrlfromPodcast(namn);
+        //                    foreach (var avsnitt in allaAvsnitt)
+        //                    {
+        //                        var avsnittTitle = avsnitt;
+        //                        ListViewItem item1 = new ListViewItem(avsnittTitle);
+        //                        lwPodAvsnitt.Items.Add(item1);
+        //                    }
+        //                }
+
+        //            }
+        //            else
+        //            {
+        //                btTaBortPod.Enabled = false;
+        //            }
+        //        }
+        //        catch (Exception ex)
+        //        {
+
+        //        }
+            
             {
                 //string namn = listBox1.SelectedItem.ToString();
 
@@ -229,7 +263,30 @@ namespace GUI
 
 
             }
+
+        private void lvCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (lvCategory.SelectedItems.Count > 0)
+                {
+                    var index = lvCategory.SelectedIndices[0];
+                    btnModifyCategory.Enabled = true;
+                    btnRemoveCategory.Enabled = true;
+
+                    string firstValue = lvCategory.Items[index].SubItems[0].Text;
+
+                    txtCategory.Clear();
+                    txtCategory.Text = firstValue;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
+
     }
     }
 
