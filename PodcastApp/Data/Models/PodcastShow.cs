@@ -16,15 +16,15 @@ namespace SharedModels
         public string Url { get; set; }
 
         public string Description { get; set; }
-        public string Kategori { get; set; }
+        public string Category { get; set; }
 
 
-        public PodcastShow(string title, string url, string desc, string kat)
+        public PodcastShow(string title, string url, string desc, string cat)
         {
             this.Title = title;
             this.Url = url;
             this.Description = desc;
-            this.Kategori = kat;
+            this.Category = cat;
 
 
 
@@ -35,9 +35,9 @@ namespace SharedModels
         {
 
         }
-        public string getKategori()
+        public string getCategory()
         {
-            return Kategori;
+            return Category;
         }
 
     }

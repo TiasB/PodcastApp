@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data.Interfaces
+namespace Data.Models
 {
-   public interface ISaveable
+    class Episode
     {
-        void Save();
     }
 }
