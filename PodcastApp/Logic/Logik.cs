@@ -13,25 +13,25 @@ namespace Logic
 {
     public class Logik
     {
-        public List<Kategori> allaKategorier { get; set; }
+        public List<Category> allaKategorier { get; set; }
         public SerializedReaderWriter SerDeser { get; set; }
         public List<PodcastShow> Podcasts { get; set; }
 
 
         public Logik()
         {
-            allaKategorier = new List<Kategori>();
+            allaKategorier = new List<Category>();
             SerDeser = new SerializedReaderWriter();
 
         }
 
         public void nyKategori(string Kategorinamn)
         {
-            Kategori enKategori = new Kategori(Kategorinamn);
+            Category enKategori = new Category(Kategorinamn);
             läggTillKategori(enKategori);
             
         }
-        public void läggTillKategori(Kategori nykategori)
+        public void läggTillKategori(Category nykategori)
         {
             allaKategorier.Add(nykategori);
         }
@@ -39,9 +39,9 @@ namespace Logic
         {
             SerDeser.SerializeCategory(allaKategorier);
         }
-        public void nyPodcast(string titel, string kategori, string url, string desc)
+        public void nyPodcast(string titel, string category, string url, string desc)
         {
-            PodcastShow newPodcast = new PodcastShow(url, kategori, titel, desc);
+            PodcastShow newPodcast = new PodcastShow(url, category, titel, desc);
             addNyPodcastToList(newPodcast);
         }
 

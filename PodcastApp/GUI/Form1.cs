@@ -68,18 +68,18 @@ namespace GUI
         }
         private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            {
-                var list = SerializedReaderWriter.GetPodcastFeed(txtURL.Text);
-                foreach (PodcastShow item in list)
-                {
-                    if (item.Title == listBox3.SelectedItem.ToString())
-                    {
-                        listBox4.Items.Add(item.Description);
-                    }
+            //{
+            //    var list = SerializedReaderWriter.GetPodcastFeed(txtURL.Text);
+            //    foreach (PodcastShow item in list)
+            //    {
+            //        if (item.Title == listBox3.SelectedItem.ToString())
+            //        {
+            //            listBox4.Items.Add(item.Description);
+            //        }
 
 
-                }
-            }
+            //    }
+            //}
 
         }
 
@@ -115,7 +115,7 @@ namespace GUI
 
         private async void btnSpara2_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
                 await
@@ -127,7 +127,7 @@ namespace GUI
             {
                 Console.WriteLine(ex);
             }
-            
+
 
         }
 
@@ -167,7 +167,7 @@ namespace GUI
 
         private void btnTaBort2_Click(object sender, EventArgs e)
         {
-           
+
             foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory()))
                 if (Podcast.Contains(".xml"))
                 {
@@ -179,7 +179,7 @@ namespace GUI
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-         {
+            {
                 //string namn = listBox1.SelectedItem.ToString();
 
 
@@ -194,15 +194,15 @@ namespace GUI
             }
         }
 
-            private void button2_Click(object sender, EventArgs e)
-            {
+        private void button2_Click(object sender, EventArgs e)
+        {
             var category = txtCategory.Text;
             logik.nyKategori(category);
             logik.saveCategoryList();
             listBox2.Items.Add(category);
             cboKategori.Items.Add(txtCategory.Text);
 
-            }
+        }
 
         private void btnTaBort1_Click(object sender, EventArgs e)
         {
@@ -215,41 +215,41 @@ namespace GUI
         }
 
         private void lvPodcastShow_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-          
-        //        try
-        //        {
-        //            var selected = lwPodcast.SelectedItems;
-        //            if (selected.Count > 0)
-        //            {
-        //                btTaBortPod.Enabled = true;
-        //                btAndraPod.Enabled = true;
-        //                lwPodAvsnitt.Items.Clear();
-        //                tbAvsnittBeskrivning.Clear();
-        //                foreach (ListViewItem item in selected)
-        //                {
-        //                    var namn = item.SubItems[0].Text;
-        //                    var allaAvsnitt = bll.getPodcastAvsnittToString(namn);
-        //                    tbUrlPod.Text = bll.getUrlfromPodcast(namn);
-        //                    foreach (var avsnitt in allaAvsnitt)
-        //                    {
-        //                        var avsnittTitle = avsnitt;
-        //                        ListViewItem item1 = new ListViewItem(avsnittTitle);
-        //                        lwPodAvsnitt.Items.Add(item1);
-        //                    }
-        //                }
+        {
 
-        //            }
-        //            else
-        //            {
-        //                btTaBortPod.Enabled = false;
-        //            }
-        //        }
-        //        catch (Exception ex)
-        //        {
+            //try
+            //{
+            //    var selected = lvPodcastShow.SelectedItems;
+            //    if (selected.Count > 0)
+            //    {
+            //        btnRemovePodcastShow.Enabled = true;
+            //        btnModifyPodcastShow.Enabled = true;
+            //        lvPodcastShow.Items.Clear();
+            //        txtDescription.Clear();
+            //        foreach (ListViewItem item in selected)
+            //        {
+            //            var namn = item.SubItems[0].Text;
+            //            var allaAvsnitt = logik.Podcasts(namn);
+            //            tbUrlPod.Text = bll.getUrlfromPodcast(namn);
+            //            foreach (var avsnitt in allaAvsnitt)
+            //            {
+            //                var avsnittTitle = avsnitt;
+            //                ListViewItem item1 = new ListViewItem(avsnittTitle);
+            //                lwPodAvsnitt.Items.Add(item1);
+            //            }
+            //        }
 
-        //        }
-            
+            //    }
+            //    else
+            //    {
+            //        btTaBortPod.Enabled = false;
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+
+            //}
+
             {
                 //string namn = listBox1.SelectedItem.ToString();
 
@@ -263,30 +263,32 @@ namespace GUI
 
 
             }
+        }
 
         private void lvCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            try
+        }
+
+        private void lvEpisodes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var list = SerializedReaderWriter.GetPodcastFeed(txtURL.Text);
+            foreach (PodcastShow item in list)
             {
-                if (lvCategory.SelectedItems.Count > 0)
+                if (item.Title == lvEpisodes.SelectedItems.ToString())
                 {
-                    var index = lvCategory.SelectedIndices[0];
-                    btnModifyCategory.Enabled = true;
-                    btnRemoveCategory.Enabled = true;
-
-                    string firstValue = lvCategory.Items[index].SubItems[0].Text;
-
-                    txtCategory.Clear();
-                    txtCategory.Text = firstValue;
+                    listBox4.Items.Add(item.Description);
                 }
-            }
-            catch (Exception ex)
-            {
+
 
             }
         }
 
+        private void txtDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-    }
+}
+
 

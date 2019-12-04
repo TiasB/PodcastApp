@@ -36,7 +36,7 @@ namespace Data
                     nypodd.Title += item.Title.Text; //funkar
                     nypodd.Url += item.Links[0].Uri.OriginalString; //funkar
                     nypodd.Description = item.Summary.Text;
-                    nypodd.Kategori = nypodd.getKategori(); //funkar men tar med <p> taggar
+                    nypodd.Category = nypodd.getCategory(); //funkar men tar med <p> taggar
                     podcastlista.Add(nypodd);
 
 
@@ -76,7 +76,7 @@ namespace Data
                 
             }
         }
-        public void SerializeCategory(List<Kategori> CategoryList)
+        public void SerializeCategory(List<Category> CategoryList)
         {
 
             try

@@ -60,7 +60,6 @@ namespace GUI
             this.episodesColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lvCategory = new System.Windows.Forms.ListView();
             this.categoryColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtDescription = new System.Windows.Forms.TextBox();
             this.lblDescription = new System.Windows.Forms.Label();
             this.btnRemoveCategory = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -88,7 +87,7 @@ namespace GUI
             // btnNy1
             // 
             this.btnNy1.Location = new System.Drawing.Point(9, 181);
-            this.btnNy1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNy1.Margin = new System.Windows.Forms.Padding(2);
             this.btnNy1.Name = "btnNy1";
             this.btnNy1.Size = new System.Drawing.Size(126, 23);
             this.btnNy1.TabIndex = 2;
@@ -99,7 +98,7 @@ namespace GUI
             // btnSpara1
             // 
             this.btnSpara1.Location = new System.Drawing.Point(171, 185);
-            this.btnSpara1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSpara1.Margin = new System.Windows.Forms.Padding(2);
             this.btnSpara1.Name = "btnSpara1";
             this.btnSpara1.Size = new System.Drawing.Size(81, 27);
             this.btnSpara1.TabIndex = 3;
@@ -110,7 +109,7 @@ namespace GUI
             // btnTaBort1
             // 
             this.btnTaBort1.Location = new System.Drawing.Point(269, 189);
-            this.btnTaBort1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTaBort1.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaBort1.Name = "btnTaBort1";
             this.btnTaBort1.Size = new System.Drawing.Size(81, 23);
             this.btnTaBort1.TabIndex = 4;
@@ -126,7 +125,7 @@ namespace GUI
             "30",
             "60"});
             this.cboUppdateringsfrekverns.Location = new System.Drawing.Point(171, 159);
-            this.cboUppdateringsfrekverns.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboUppdateringsfrekverns.Margin = new System.Windows.Forms.Padding(2);
             this.cboUppdateringsfrekverns.Name = "cboUppdateringsfrekverns";
             this.cboUppdateringsfrekverns.Size = new System.Drawing.Size(82, 21);
             this.cboUppdateringsfrekverns.TabIndex = 6;
@@ -136,7 +135,7 @@ namespace GUI
             // 
             this.cboKategori.FormattingEnabled = true;
             this.cboKategori.Location = new System.Drawing.Point(268, 160);
-            this.cboKategori.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboKategori.Margin = new System.Windows.Forms.Padding(2);
             this.cboKategori.Name = "cboKategori";
             this.cboKategori.Size = new System.Drawing.Size(82, 21);
             this.cboKategori.TabIndex = 7;
@@ -145,7 +144,7 @@ namespace GUI
             // txtURL
             // 
             this.txtURL.Location = new System.Drawing.Point(9, 160);
-            this.txtURL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtURL.Margin = new System.Windows.Forms.Padding(2);
             this.txtURL.Name = "txtURL";
             this.txtURL.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtURL.Size = new System.Drawing.Size(157, 20);
@@ -187,7 +186,7 @@ namespace GUI
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.Location = new System.Drawing.Point(456, 149);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(2);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(59, 30);
             this.listBox2.TabIndex = 12;
@@ -197,7 +196,7 @@ namespace GUI
             // 
             this.listBox3.FormattingEnabled = true;
             this.listBox3.Location = new System.Drawing.Point(389, 183);
-            this.listBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox3.Margin = new System.Windows.Forms.Padding(2);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(64, 43);
             this.listBox3.TabIndex = 13;
@@ -206,7 +205,7 @@ namespace GUI
             // txtCategory
             // 
             this.txtCategory.Location = new System.Drawing.Point(532, 141);
-            this.txtCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCategory.Margin = new System.Windows.Forms.Padding(2);
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(273, 20);
             this.txtCategory.TabIndex = 14;
@@ -215,7 +214,7 @@ namespace GUI
             // btnModifyCategory
             // 
             this.btnModifyCategory.Location = new System.Drawing.Point(749, 162);
-            this.btnModifyCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModifyCategory.Margin = new System.Windows.Forms.Padding(2);
             this.btnModifyCategory.Name = "btnModifyCategory";
             this.btnModifyCategory.Size = new System.Drawing.Size(80, 25);
             this.btnModifyCategory.TabIndex = 15;
@@ -226,7 +225,7 @@ namespace GUI
             // btnSpara2
             // 
             this.btnSpara2.Location = new System.Drawing.Point(127, 213);
-            this.btnSpara2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSpara2.Margin = new System.Windows.Forms.Padding(2);
             this.btnSpara2.Name = "btnSpara2";
             this.btnSpara2.Size = new System.Drawing.Size(50, 25);
             this.btnSpara2.TabIndex = 16;
@@ -237,7 +236,7 @@ namespace GUI
             // btnShowPodcasts
             // 
             this.btnShowPodcasts.Location = new System.Drawing.Point(121, 8);
-            this.btnShowPodcasts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnShowPodcasts.Margin = new System.Windows.Forms.Padding(2);
             this.btnShowPodcasts.Name = "btnShowPodcasts";
             this.btnShowPodcasts.Size = new System.Drawing.Size(130, 25);
             this.btnShowPodcasts.TabIndex = 17;
@@ -248,10 +247,10 @@ namespace GUI
             // listBox4
             // 
             this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(456, 184);
-            this.listBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox4.Location = new System.Drawing.Point(533, 303);
+            this.listBox4.Margin = new System.Windows.Forms.Padding(2);
             this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(59, 43);
+            this.listBox4.Size = new System.Drawing.Size(296, 147);
             this.listBox4.TabIndex = 18;
             this.listBox4.SelectedIndexChanged += new System.EventHandler(this.listBox4_SelectedIndexChanged);
             // 
@@ -268,7 +267,7 @@ namespace GUI
             // btnCreateCategory
             // 
             this.btnCreateCategory.Location = new System.Drawing.Point(532, 162);
-            this.btnCreateCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreateCategory.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateCategory.Name = "btnCreateCategory";
             this.btnCreateCategory.Size = new System.Drawing.Size(60, 24);
             this.btnCreateCategory.TabIndex = 20;
@@ -287,7 +286,7 @@ namespace GUI
             this.lvPodcastShow.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
             this.lvPodcastShow.Location = new System.Drawing.Point(9, 37);
-            this.lvPodcastShow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvPodcastShow.Margin = new System.Windows.Forms.Padding(2);
             this.lvPodcastShow.Name = "lvPodcastShow";
             this.lvPodcastShow.Size = new System.Drawing.Size(363, 107);
             this.lvPodcastShow.TabIndex = 21;
@@ -321,12 +320,13 @@ namespace GUI
             this.episodesColumn});
             this.lvEpisodes.HideSelection = false;
             this.lvEpisodes.Location = new System.Drawing.Point(8, 303);
-            this.lvEpisodes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvEpisodes.Margin = new System.Windows.Forms.Padding(2);
             this.lvEpisodes.Name = "lvEpisodes";
             this.lvEpisodes.Size = new System.Drawing.Size(360, 147);
             this.lvEpisodes.TabIndex = 22;
             this.lvEpisodes.UseCompatibleStateImageBehavior = false;
             this.lvEpisodes.View = System.Windows.Forms.View.Details;
+            this.lvEpisodes.SelectedIndexChanged += new System.EventHandler(this.lvEpisodes_SelectedIndexChanged);
             // 
             // episodesColumn
             // 
@@ -339,7 +339,7 @@ namespace GUI
             this.categoryColumn});
             this.lvCategory.HideSelection = false;
             this.lvCategory.Location = new System.Drawing.Point(532, 8);
-            this.lvCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvCategory.Margin = new System.Windows.Forms.Padding(2);
             this.lvCategory.Name = "lvCategory";
             this.lvCategory.Size = new System.Drawing.Size(273, 102);
             this.lvCategory.TabIndex = 23;
@@ -351,15 +351,6 @@ namespace GUI
             // 
             this.categoryColumn.Text = "Category";
             this.categoryColumn.Width = 200;
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.Location = new System.Drawing.Point(532, 303);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(273, 147);
-            this.txtDescription.TabIndex = 24;
             // 
             // lblDescription
             // 
@@ -374,7 +365,7 @@ namespace GUI
             // btnRemoveCategory
             // 
             this.btnRemoveCategory.Location = new System.Drawing.Point(633, 163);
-            this.btnRemoveCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRemoveCategory.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemoveCategory.Name = "btnRemoveCategory";
             this.btnRemoveCategory.Size = new System.Drawing.Size(74, 23);
             this.btnRemoveCategory.TabIndex = 26;
@@ -389,7 +380,6 @@ namespace GUI
             this.ClientSize = new System.Drawing.Size(866, 450);
             this.Controls.Add(this.btnRemoveCategory);
             this.Controls.Add(this.lblDescription);
-            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.lvCategory);
             this.Controls.Add(this.lvEpisodes);
             this.Controls.Add(this.lvPodcastShow);
@@ -413,7 +403,7 @@ namespace GUI
             this.Controls.Add(this.btnNy1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.lblHeader);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "PodcastApp";
@@ -459,7 +449,6 @@ namespace GUI
         private System.Windows.Forms.ColumnHeader episodesColumn;
         private System.Windows.Forms.ListView lvCategory;
         private System.Windows.Forms.ColumnHeader categoryColumn;
-        private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Button btnRemoveCategory;
     }
