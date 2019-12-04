@@ -198,7 +198,7 @@ namespace GUI
             // 
             // txtKategori
             // 
-            this.txtKategori.Location = new System.Drawing.Point(798, 218);
+            this.txtKategori.Location = new System.Drawing.Point(798, 217);
             this.txtKategori.Name = "txtKategori";
             this.txtKategori.Size = new System.Drawing.Size(408, 26);
             this.txtKategori.TabIndex = 14;
@@ -325,7 +325,7 @@ namespace GUI
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.categoryColumn});
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(798, 57);
+            this.listView2.Location = new System.Drawing.Point(798, 12);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(408, 155);
             this.listView2.TabIndex = 23;
