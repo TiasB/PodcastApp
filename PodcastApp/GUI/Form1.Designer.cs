@@ -56,7 +56,7 @@ namespace GUI
             this.Episodes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Updatesetting = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Category = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvEpisodes = new System.Windows.Forms.ListView();
             this.episodesColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lvCategory = new System.Windows.Forms.ListView();
             this.categoryColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -69,10 +69,9 @@ namespace GUI
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeader.Location = new System.Drawing.Point(18, 14);
-            this.lblHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHeader.Location = new System.Drawing.Point(12, 9);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(133, 29);
+            this.lblHeader.Size = new System.Drawing.Size(92, 20);
             this.lblHeader.TabIndex = 0;
             this.lblHeader.Text = "AmeriCast";
             this.lblHeader.Click += new System.EventHandler(this.label1_Click);
@@ -80,19 +79,18 @@ namespace GUI
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(583, 230);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.listBox1.Location = new System.Drawing.Point(389, 149);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(94, 44);
+            this.listBox1.Size = new System.Drawing.Size(64, 30);
             this.listBox1.TabIndex = 1;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // btnNy1
             // 
-            this.btnNy1.Location = new System.Drawing.Point(14, 278);
+            this.btnNy1.Location = new System.Drawing.Point(9, 181);
+            this.btnNy1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNy1.Name = "btnNy1";
-            this.btnNy1.Size = new System.Drawing.Size(189, 35);
+            this.btnNy1.Size = new System.Drawing.Size(126, 23);
             this.btnNy1.TabIndex = 2;
             this.btnNy1.Text = "Add PodcastShow";
             this.btnNy1.UseVisualStyleBackColor = true;
@@ -100,9 +98,10 @@ namespace GUI
             // 
             // btnSpara1
             // 
-            this.btnSpara1.Location = new System.Drawing.Point(256, 285);
+            this.btnSpara1.Location = new System.Drawing.Point(171, 185);
+            this.btnSpara1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSpara1.Name = "btnSpara1";
-            this.btnSpara1.Size = new System.Drawing.Size(122, 42);
+            this.btnSpara1.Size = new System.Drawing.Size(81, 27);
             this.btnSpara1.TabIndex = 3;
             this.btnSpara1.Text = "Spara";
             this.btnSpara1.UseVisualStyleBackColor = true;
@@ -110,9 +109,10 @@ namespace GUI
             // 
             // btnTaBort1
             // 
-            this.btnTaBort1.Location = new System.Drawing.Point(404, 291);
+            this.btnTaBort1.Location = new System.Drawing.Point(269, 189);
+            this.btnTaBort1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTaBort1.Name = "btnTaBort1";
-            this.btnTaBort1.Size = new System.Drawing.Size(122, 35);
+            this.btnTaBort1.Size = new System.Drawing.Size(81, 23);
             this.btnTaBort1.TabIndex = 4;
             this.btnTaBort1.Text = "Ta bort";
             this.btnTaBort1.UseVisualStyleBackColor = true;
@@ -125,27 +125,30 @@ namespace GUI
             "5",
             "30",
             "60"});
-            this.cboUppdateringsfrekverns.Location = new System.Drawing.Point(256, 245);
+            this.cboUppdateringsfrekverns.Location = new System.Drawing.Point(171, 159);
+            this.cboUppdateringsfrekverns.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboUppdateringsfrekverns.Name = "cboUppdateringsfrekverns";
-            this.cboUppdateringsfrekverns.Size = new System.Drawing.Size(121, 28);
+            this.cboUppdateringsfrekverns.Size = new System.Drawing.Size(82, 21);
             this.cboUppdateringsfrekverns.TabIndex = 6;
             this.cboUppdateringsfrekverns.Text = "(Minuter)";
             // 
             // cboKategori
             // 
             this.cboKategori.FormattingEnabled = true;
-            this.cboKategori.Location = new System.Drawing.Point(402, 246);
+            this.cboKategori.Location = new System.Drawing.Point(268, 160);
+            this.cboKategori.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboKategori.Name = "cboKategori";
-            this.cboKategori.Size = new System.Drawing.Size(121, 28);
+            this.cboKategori.Size = new System.Drawing.Size(82, 21);
             this.cboKategori.TabIndex = 7;
             this.cboKategori.SelectedIndexChanged += new System.EventHandler(this.cboKategori_SelectedIndexChanged);
             // 
             // txtURL
             // 
-            this.txtURL.Location = new System.Drawing.Point(14, 246);
+            this.txtURL.Location = new System.Drawing.Point(9, 160);
+            this.txtURL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtURL.Name = "txtURL";
             this.txtURL.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtURL.Size = new System.Drawing.Size(234, 26);
+            this.txtURL.Size = new System.Drawing.Size(157, 20);
             this.txtURL.TabIndex = 8;
             this.txtURL.Text = "http://tuttobalutto.libsyn.com/rss";
             this.txtURL.TextChanged += new System.EventHandler(this.txtURL_TextChanged);
@@ -153,63 +156,68 @@ namespace GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(72, 223);
+            this.label2.Location = new System.Drawing.Point(48, 145);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 20);
+            this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 9;
             this.label2.Text = ":URL";
             // 
             // lblUppdateringsfrekvens
             // 
             this.lblUppdateringsfrekvens.AutoSize = true;
-            this.lblUppdateringsfrekvens.Location = new System.Drawing.Point(255, 223);
+            this.lblUppdateringsfrekvens.Location = new System.Drawing.Point(170, 145);
+            this.lblUppdateringsfrekvens.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUppdateringsfrekvens.Name = "lblUppdateringsfrekvens";
-            this.lblUppdateringsfrekvens.Size = new System.Drawing.Size(169, 20);
+            this.lblUppdateringsfrekvens.Size = new System.Drawing.Size(114, 13);
             this.lblUppdateringsfrekvens.TabIndex = 10;
             this.lblUppdateringsfrekvens.Text = ":Uppdateringsfrekvens";
             // 
             // lblKategori
             // 
             this.lblKategori.AutoSize = true;
-            this.lblKategori.Location = new System.Drawing.Point(432, 223);
+            this.lblKategori.Location = new System.Drawing.Point(288, 145);
+            this.lblKategori.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKategori.Name = "lblKategori";
-            this.lblKategori.Size = new System.Drawing.Size(72, 20);
+            this.lblKategori.Size = new System.Drawing.Size(49, 13);
             this.lblKategori.TabIndex = 11;
             this.lblKategori.Text = ":Kategori";
             // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 20;
-            this.listBox2.Location = new System.Drawing.Point(684, 230);
+            this.listBox2.Location = new System.Drawing.Point(456, 149);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(86, 44);
+            this.listBox2.Size = new System.Drawing.Size(59, 30);
             this.listBox2.TabIndex = 12;
             this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // listBox3
             // 
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 20;
-            this.listBox3.Location = new System.Drawing.Point(583, 282);
+            this.listBox3.Location = new System.Drawing.Point(389, 183);
+            this.listBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(94, 64);
+            this.listBox3.Size = new System.Drawing.Size(64, 43);
             this.listBox3.TabIndex = 13;
             this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
             // txtCategory
             // 
-            this.txtCategory.Location = new System.Drawing.Point(798, 217);
+            this.txtCategory.Location = new System.Drawing.Point(532, 141);
+            this.txtCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(408, 26);
+            this.txtCategory.Size = new System.Drawing.Size(273, 20);
             this.txtCategory.TabIndex = 14;
             this.txtCategory.TextChanged += new System.EventHandler(this.txtKategori_TextChanged);
             // 
             // btnModifyCategory
             // 
-            this.btnModifyCategory.Location = new System.Drawing.Point(1123, 249);
+            this.btnModifyCategory.Location = new System.Drawing.Point(749, 162);
+            this.btnModifyCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnModifyCategory.Name = "btnModifyCategory";
-            this.btnModifyCategory.Size = new System.Drawing.Size(120, 38);
+            this.btnModifyCategory.Size = new System.Drawing.Size(80, 25);
             this.btnModifyCategory.TabIndex = 15;
             this.btnModifyCategory.Text = "Modify";
             this.btnModifyCategory.UseVisualStyleBackColor = true;
@@ -217,9 +225,10 @@ namespace GUI
             // 
             // btnSpara2
             // 
-            this.btnSpara2.Location = new System.Drawing.Point(191, 327);
+            this.btnSpara2.Location = new System.Drawing.Point(127, 213);
+            this.btnSpara2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSpara2.Name = "btnSpara2";
-            this.btnSpara2.Size = new System.Drawing.Size(75, 38);
+            this.btnSpara2.Size = new System.Drawing.Size(50, 25);
             this.btnSpara2.TabIndex = 16;
             this.btnSpara2.Text = "Spara";
             this.btnSpara2.UseVisualStyleBackColor = true;
@@ -227,9 +236,10 @@ namespace GUI
             // 
             // btnShowPodcasts
             // 
-            this.btnShowPodcasts.Location = new System.Drawing.Point(182, 12);
+            this.btnShowPodcasts.Location = new System.Drawing.Point(121, 8);
+            this.btnShowPodcasts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnShowPodcasts.Name = "btnShowPodcasts";
-            this.btnShowPodcasts.Size = new System.Drawing.Size(195, 38);
+            this.btnShowPodcasts.Size = new System.Drawing.Size(130, 25);
             this.btnShowPodcasts.TabIndex = 17;
             this.btnShowPodcasts.Text = "Show pocast feeds";
             this.btnShowPodcasts.UseVisualStyleBackColor = true;
@@ -238,19 +248,18 @@ namespace GUI
             // listBox4
             // 
             this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 20;
-            this.listBox4.Location = new System.Drawing.Point(684, 283);
+            this.listBox4.Location = new System.Drawing.Point(456, 184);
+            this.listBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(86, 64);
+            this.listBox4.Size = new System.Drawing.Size(59, 43);
             this.listBox4.TabIndex = 18;
             this.listBox4.SelectedIndexChanged += new System.EventHandler(this.listBox4_SelectedIndexChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(54, 329);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(36, 214);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 35);
+            this.button1.Size = new System.Drawing.Size(87, 23);
             this.button1.TabIndex = 19;
             this.button1.Text = "Delejt\r\n";
             this.button1.UseVisualStyleBackColor = true;
@@ -258,9 +267,10 @@ namespace GUI
             // 
             // btnCreateCategory
             // 
-            this.btnCreateCategory.Location = new System.Drawing.Point(798, 249);
+            this.btnCreateCategory.Location = new System.Drawing.Point(532, 162);
+            this.btnCreateCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCreateCategory.Name = "btnCreateCategory";
-            this.btnCreateCategory.Size = new System.Drawing.Size(90, 37);
+            this.btnCreateCategory.Size = new System.Drawing.Size(60, 24);
             this.btnCreateCategory.TabIndex = 20;
             this.btnCreateCategory.Text = "Create";
             this.btnCreateCategory.UseVisualStyleBackColor = true;
@@ -276,9 +286,10 @@ namespace GUI
             this.lvPodcastShow.HideSelection = false;
             this.lvPodcastShow.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
-            this.lvPodcastShow.Location = new System.Drawing.Point(14, 57);
+            this.lvPodcastShow.Location = new System.Drawing.Point(9, 37);
+            this.lvPodcastShow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lvPodcastShow.Name = "lvPodcastShow";
-            this.lvPodcastShow.Size = new System.Drawing.Size(542, 163);
+            this.lvPodcastShow.Size = new System.Drawing.Size(363, 107);
             this.lvPodcastShow.TabIndex = 21;
             this.lvPodcastShow.UseCompatibleStateImageBehavior = false;
             this.lvPodcastShow.View = System.Windows.Forms.View.Details;
@@ -304,17 +315,18 @@ namespace GUI
             this.Category.Text = "Category";
             this.Category.Width = 110;
             // 
-            // listView1
+            // lvEpisodes
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvEpisodes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.episodesColumn});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 466);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(538, 224);
-            this.listView1.TabIndex = 22;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvEpisodes.HideSelection = false;
+            this.lvEpisodes.Location = new System.Drawing.Point(8, 303);
+            this.lvEpisodes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvEpisodes.Name = "lvEpisodes";
+            this.lvEpisodes.Size = new System.Drawing.Size(360, 147);
+            this.lvEpisodes.TabIndex = 22;
+            this.lvEpisodes.UseCompatibleStateImageBehavior = false;
+            this.lvEpisodes.View = System.Windows.Forms.View.Details;
             // 
             // episodesColumn
             // 
@@ -326,9 +338,10 @@ namespace GUI
             this.lvCategory.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.categoryColumn});
             this.lvCategory.HideSelection = false;
-            this.lvCategory.Location = new System.Drawing.Point(798, 12);
+            this.lvCategory.Location = new System.Drawing.Point(532, 8);
+            this.lvCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lvCategory.Name = "lvCategory";
-            this.lvCategory.Size = new System.Drawing.Size(408, 155);
+            this.lvCategory.Size = new System.Drawing.Size(273, 102);
             this.lvCategory.TabIndex = 23;
             this.lvCategory.UseCompatibleStateImageBehavior = false;
             this.lvCategory.View = System.Windows.Forms.View.Details;
@@ -341,41 +354,44 @@ namespace GUI
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(798, 466);
+            this.txtDescription.Location = new System.Drawing.Point(532, 303);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(408, 224);
+            this.txtDescription.Size = new System.Drawing.Size(273, 147);
             this.txtDescription.TabIndex = 24;
             // 
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(798, 432);
+            this.lblDescription.Location = new System.Drawing.Point(532, 281);
+            this.lblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(148, 20);
+            this.lblDescription.Size = new System.Drawing.Size(99, 13);
             this.lblDescription.TabIndex = 25;
             this.lblDescription.Text = "Episode description";
             // 
             // btnRemoveCategory
             // 
-            this.btnRemoveCategory.Location = new System.Drawing.Point(949, 251);
+            this.btnRemoveCategory.Location = new System.Drawing.Point(633, 163);
+            this.btnRemoveCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRemoveCategory.Name = "btnRemoveCategory";
-            this.btnRemoveCategory.Size = new System.Drawing.Size(111, 36);
+            this.btnRemoveCategory.Size = new System.Drawing.Size(74, 23);
             this.btnRemoveCategory.TabIndex = 26;
             this.btnRemoveCategory.Text = "Remove";
             this.btnRemoveCategory.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1299, 693);
+            this.ClientSize = new System.Drawing.Size(866, 450);
             this.Controls.Add(this.btnRemoveCategory);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.lvCategory);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lvEpisodes);
             this.Controls.Add(this.lvPodcastShow);
             this.Controls.Add(this.btnCreateCategory);
             this.Controls.Add(this.button1);
@@ -397,6 +413,7 @@ namespace GUI
             this.Controls.Add(this.btnNy1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.lblHeader);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "PodcastApp";
@@ -438,7 +455,7 @@ namespace GUI
         private System.Windows.Forms.ColumnHeader PodcastShow;
         private System.Windows.Forms.ColumnHeader Episodes;
         private System.Windows.Forms.ColumnHeader Category;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvEpisodes;
         private System.Windows.Forms.ColumnHeader episodesColumn;
         private System.Windows.Forms.ListView lvCategory;
         private System.Windows.Forms.ColumnHeader categoryColumn;

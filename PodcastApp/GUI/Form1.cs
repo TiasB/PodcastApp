@@ -60,11 +60,11 @@ namespace GUI
             var list = SerializedReaderWriter.GetPodcastFeed(namn);
             foreach (PodcastShow item in list)
             {
-                listBox3.Items.Add(item.Title);
+                lvEpisodes.Items.Add(item.Title);
 
 
             }
-            listBox3.Items.Add(SerializedReaderWriter.GetPodcastFeed(namn));
+            lvEpisodes.Items.Add(list.ToString());
         }
         private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -172,7 +172,7 @@ namespace GUI
                 if (Podcast.Contains(".xml"))
                 {
                     string podSpara = Path.GetFileName(Podcast);
-                    listBox1.Items.Add(podSpara);
+                    lvPodcastShow.Items.Add(podSpara);
                 }
 
         }
