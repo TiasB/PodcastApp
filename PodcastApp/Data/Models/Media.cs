@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data.Models
-{
-    public class Media : ISaveable 
-    {
-    }
-}
+//namespace Data.Models
+//{
+//    public class Media : ISaveable 
+//    {
+//    }
+//}

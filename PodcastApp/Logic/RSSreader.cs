@@ -10,7 +10,7 @@ using System.Xml;
 
 using Data;
 using Newtonsoft.Json;
-using SharedModels;
+//using SharedModels;
 namespace Logic
 {
     public class RSSreader

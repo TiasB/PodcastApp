@@ -49,6 +49,28 @@ namespace Logic
         {
             Podcasts.Add(nyPodcast);
         }
+        private List<PodcastShow> getPodcastListByName(string name)
+        {
+            return Podcasts
+                               .Where(pod => pod.Title.Equals(name))
+                               .ToList();
+        }
+        public List<string> getPodcastEpisodesToString(string name)
+        {
+            List<string> allEpisodesToString = new List<string>();
+            var sortedPodcastListByName = getPodcastListByName(name);
+
+            foreach (var podcast in sortedPodcastListByName)
+            {
+          
+                foreach (PodcastShow pod in Podcasts)
+                {
+                    string EpisodeTitle = pod.Title.ToString();
+                    allEpisodesToString.Add(EpisodeTitle);
+                }
+            }
+            return allEpisodesToString;
+        }
 
     }//logik
 

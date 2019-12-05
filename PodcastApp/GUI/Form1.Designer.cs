@@ -195,10 +195,11 @@ namespace GUI
             // listBox3
             // 
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(389, 183);
+            this.listBox3.Location = new System.Drawing.Point(12, 303);
             this.listBox3.Margin = new System.Windows.Forms.Padding(2);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(64, 43);
+            this.listBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.listBox3.Size = new System.Drawing.Size(263, 147);
             this.listBox3.TabIndex = 13;
             this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
@@ -247,9 +248,11 @@ namespace GUI
             // listBox4
             // 
             this.listBox4.FormattingEnabled = true;
+            this.listBox4.HorizontalScrollbar = true;
             this.listBox4.Location = new System.Drawing.Point(533, 303);
             this.listBox4.Margin = new System.Windows.Forms.Padding(2);
             this.listBox4.Name = "listBox4";
+            this.listBox4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBox4.Size = new System.Drawing.Size(296, 147);
             this.listBox4.TabIndex = 18;
             this.listBox4.SelectedIndexChanged += new System.EventHandler(this.listBox4_SelectedIndexChanged);
@@ -319,10 +322,11 @@ namespace GUI
             this.lvEpisodes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.episodesColumn});
             this.lvEpisodes.HideSelection = false;
-            this.lvEpisodes.Location = new System.Drawing.Point(8, 303);
+            this.lvEpisodes.Location = new System.Drawing.Point(389, 181);
             this.lvEpisodes.Margin = new System.Windows.Forms.Padding(2);
             this.lvEpisodes.Name = "lvEpisodes";
-            this.lvEpisodes.Size = new System.Drawing.Size(360, 147);
+            this.lvEpisodes.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lvEpisodes.Size = new System.Drawing.Size(57, 52);
             this.lvEpisodes.TabIndex = 22;
             this.lvEpisodes.UseCompatibleStateImageBehavior = false;
             this.lvEpisodes.View = System.Windows.Forms.View.Details;
