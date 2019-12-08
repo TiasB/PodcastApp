@@ -71,6 +71,48 @@ namespace Logic
             }
             return allEpisodesToString;
         }
+        public string getUrlfromPodcast(string name)
+        {
+            var sortedList = getPodcastListByName(name);
+            var url = "";
+
+            foreach (var pod in sortedList)
+            {
+                url = pod.Url;
+
+
+            }
+
+            return url;
+        }
+        public List<List<string>> ConvertPodcastListToString(string val)
+        {
+            var podcastlista = new List<PodcastShow>();
+
+            switch (val)
+            {
+                case "HelaListan":
+                    podcastlista = Podcasts;
+                    break;
+            }
+            var allPodcastsInString = new List<List<string>>();
+            var podcastProperty = new List<string>();
+
+            foreach (PodcastShow podcast in podcastlista)
+            {
+                var kategori = podcast.Category;
+
+                var name = podcast.Title;
+
+                podcastProperty.Add(name);
+
+                podcastProperty.Add(kategori);
+
+                allPodcastsInString.Add(podcastProperty);
+
+            }
+            return allPodcastsInString;
+        }
 
     }//logik
 

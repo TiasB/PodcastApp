@@ -168,12 +168,11 @@ namespace GUI
         private void btnTaBort2_Click(object sender, EventArgs e)
         {
 
-            foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory()))
-                if (Podcast.Contains(".xml"))
-                {
-                    string podSpara = Path.GetFileName(Podcast);                 
-                    lvPodcastShow.Items.Add(podSpara);
-                }
+            var podcastList = logik.Podcasts;
+            foreach (PodcastShow pod in podcastList)
+            {
+                lvPodcastShow.Items.Add(pod.Title);
+            }
 
         }
 
@@ -229,10 +228,11 @@ namespace GUI
                    
                     foreach (ListViewItem item in selected)
                     {
-                        var namn = item.SubItems[0].Text.Replace(".xml", "");
+                        var namn = item.Text;
                       
                         var allaAvsnitt = logik.getPodcastEpisodesToString(namn);
-                   
+                        txtURL.Text = logik.getUrlfromPodcast(namn);
+
                         foreach (var avsnitt in allaAvsnitt)
                         {
                             var avsnittTitle = avsnitt;
