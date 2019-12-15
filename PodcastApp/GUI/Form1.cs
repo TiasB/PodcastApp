@@ -60,26 +60,26 @@ namespace GUI
             var list = SerializedReaderWriter.GetPodcastFeed(namn);
             foreach (PodcastShow item in list)
             {
-                lvEpisodes.Items.Add(item.Title);
+                listBox3.Items.Add(item.Title);
 
 
             }
-            lvEpisodes.Items.Add(list.ToString());
+            listBox3.Items.Add(list.ToString());
         }
         private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //{
-            //    var list = SerializedReaderWriter.GetPodcastFeed(txtURL.Text);
-            //    foreach (PodcastShow item in list)
-            //    {
-            //        if (item.Title == listBox3.SelectedItem.ToString())
-            //        {
-            //            listBox4.Items.Add(item.Description);
-            //        }
+            {
+                var list = SerializedReaderWriter.GetPodcastFeed(txtURL.Text);
+                foreach (PodcastShow item in list)
+                {
+                    if (item.Title == listBox3.SelectedItem.ToString())
+                    {
+                        listBox4.Items.Add(item.Description);
+                    }
 
 
-            //    }
-            //}
+                }
+            }
 
         }
 
@@ -168,12 +168,11 @@ namespace GUI
         private void btnTaBort2_Click(object sender, EventArgs e)
         {
 
-            foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory()))
-                if (Podcast.Contains(".xml"))
-                {
-                    string podSpara = Path.GetFileName(Podcast);
-                    lvPodcastShow.Items.Add(podSpara);
-                }
+            var podcastList = logik.Podcasts;
+            foreach (PodcastShow pod in podcastList)
+            {
+                lvPodcastShow.Items.Add(pod.Title);
+            }
 
         }
 
@@ -216,39 +215,42 @@ namespace GUI
 
         private void lvPodcastShow_SelectedIndexChanged(object sender, EventArgs e)
         {
+ 
+          
 
-            //try
-            //{
-            //    var selected = lvPodcastShow.SelectedItems;
-            //    if (selected.Count > 0)
-            //    {
-            //        btnRemovePodcastShow.Enabled = true;
-            //        btnModifyPodcastShow.Enabled = true;
-            //        lvPodcastShow.Items.Clear();
-            //        txtDescription.Clear();
-            //        foreach (ListViewItem item in selected)
-            //        {
-            //            var namn = item.SubItems[0].Text;
-            //            var allaAvsnitt = logik.Podcasts(namn);
-            //            tbUrlPod.Text = bll.getUrlfromPodcast(namn);
-            //            foreach (var avsnitt in allaAvsnitt)
-            //            {
-            //                var avsnittTitle = avsnitt;
-            //                ListViewItem item1 = new ListViewItem(avsnittTitle);
-            //                lwPodAvsnitt.Items.Add(item1);
-            //            }
-            //        }
+            try
+            {
+                var selected = lvPodcastShow.SelectedItems;
 
-            //    }
-            //    else
-            //    {
-            //        btTaBortPod.Enabled = false;
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
+                if (selected.Count > 0)
+                {
+                    
+                   
+                    foreach (ListViewItem item in selected)
+                    {
+                        var namn = item.Text;
+                      
+                        var allaAvsnitt = logik.getPodcastEpisodesToString(namn);
+                        txtURL.Text = logik.getUrlfromPodcast(namn);
 
-            //}
+                        foreach (var avsnitt in allaAvsnitt)
+                        {
+                            var avsnittTitle = avsnitt;
+                            ListViewItem item1 = new ListViewItem(avsnittTitle);
+                            listBox3.Items.Add(item1);
+                        }
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("något har blivit fel");
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
 
             {
                 //string namn = listBox1.SelectedItem.ToString();
@@ -272,16 +274,19 @@ namespace GUI
 
         private void lvEpisodes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var list = SerializedReaderWriter.GetPodcastFeed(txtURL.Text);
-            foreach (PodcastShow item in list)
-            {
-                if (item.Title == lvEpisodes.SelectedItems.ToString())
-                {
-                    listBox4.Items.Add(item.Description);
-                }
+        //    {
+        //       var list = SerializedReaderWriter.GetPodcastFeed(txtURL.Text);
+        //       foreach (PodcastShow item in list)
+        //       {
+
+        //            if (item.Title == lvEpisodes.SelectedItem.ToString())
+        //          {
+        //              listBox4.Items.Add(item.Description);
+        //          }
 
 
-            }
+        //      }
+        //   }
         }
 
         private void txtDescription_TextChanged(object sender, EventArgs e)

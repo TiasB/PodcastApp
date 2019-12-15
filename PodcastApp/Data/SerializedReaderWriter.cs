@@ -138,7 +138,7 @@ namespace Data
             //Deserialize<PodcastShow<GetPodcastFeed>>(url);
 
 
-            XmlWriter writer = XmlWriter.Create(feed.Title.Text + ".xml", setting);
+            XmlWriter writer = XmlWriter.Create(feed.Title.Text , setting);
 
             using (writer)
             {
@@ -150,25 +150,69 @@ namespace Data
 
 
         }
-        //public string getkategori()
-        //    {
-        //        foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory()))
-        //            if (Podcast.Contains(".xml") && !Podcast.Contains("Newtonsoft"))
-        //            {
-        //                string kategorinamn = Path.GetFileName(Podcast);
+        public string getPodcastTitleFromUrl(string url)
+        {
+            string title = "";
+            try
+            {
+                var reader = XmlReader.Create(url);
+                reader.ReadToFollowing("title");
+                title = reader.ReadElementContentAsString();
+                return title;
+            }
+            catch (Exception ex)
+            {
+                return title;
+            } // måste skrivas om
+        }
 
-        //                return kategorinamn;
+        public List<PodcastShow> getSparadPodcastListaFromJson()
+        {
+            List<PodcastShow> podcastLista = new List<PodcastShow>();
+            try
+            {
+
+                var serializer = new JsonSerializer
+                {
+                    TypeNameHandling = TypeNameHandling.All
+                };
+
+                using (var sr = new StreamReader("sparadepodcasts.Json"))
+                {
+                    using (var jtr = new JsonTextReader(sr))
+                    {
+                        podcastLista = serializer.Deserialize<List<PodcastShow>>(jtr);
+                        return podcastLista;
+                    }
+
+                }
+            
+             }
+            catch (Exception ex)
+            {
+                return podcastLista;
+            }
+}
+            
+            //public string getkategori()
+            //    {
+            //        foreach (string Podcast in Directory.GetFiles(Directory.GetCurrentDirectory()))
+            //            if (Podcast.Contains(".xml") && !Podcast.Contains("Newtonsoft"))
+            //            {
+            //                string kategorinamn = Path.GetFileName(Podcast);
+
+                //                return kategorinamn;
 
 
 
-        //        }
+                //        }
 
 
 
-        //    }
+                //    }
 
 
-        public string Pod(string url)
+                public string Pod(string url)
         {
 
 

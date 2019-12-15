@@ -49,6 +49,70 @@ namespace Logic
         {
             Podcasts.Add(nyPodcast);
         }
+        private List<PodcastShow> getPodcastListByName(string name)
+        {
+            return Podcasts
+                               .Where(pod => pod.Title.Equals(name))
+                               .ToList();
+        }
+        public List<string> getPodcastEpisodesToString(string name)
+        {
+            List<string> allEpisodesToString = new List<string>();
+            var sortedPodcastListByName = getPodcastListByName(name);
+
+            foreach (var podcast in sortedPodcastListByName)
+            {
+          
+                foreach (PodcastShow pod in Podcasts)
+                {
+                    string EpisodeTitle = pod.Title.ToString();
+                    allEpisodesToString.Add(EpisodeTitle);
+                }
+            }
+            return allEpisodesToString;
+        }
+        public string getUrlfromPodcast(string name)
+        {
+            var sortedList = getPodcastListByName(name);
+            var url = "";
+
+            foreach (var pod in sortedList)
+            {
+                url = pod.Url;
+
+
+            }
+
+            return url;
+        }
+        public List<List<string>> ConvertPodcastListToString(string val)
+        {
+            var podcastlista = new List<PodcastShow>();
+
+            switch (val)
+            {
+                case "HelaListan":
+                    podcastlista = Podcasts;
+                    break;
+            }
+            var allPodcastsInString = new List<List<string>>();
+            var podcastProperty = new List<string>();
+
+            foreach (PodcastShow podcast in podcastlista)
+            {
+                var kategori = podcast.Category;
+
+                var name = podcast.Title;
+
+                podcastProperty.Add(name);
+
+                podcastProperty.Add(kategori);
+
+                allPodcastsInString.Add(podcastProperty);
+
+            }
+            return allPodcastsInString;
+        }
 
     }//logik
 
