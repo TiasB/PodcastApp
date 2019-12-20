@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using Data;
-
 using SharedModels;
 
 namespace Logic
@@ -26,7 +25,7 @@ namespace Logic
         }
 
         public void nyKategori(string Kategorinamn)
-        {
+        {:
             Category enKategori = new Category(Kategorinamn);
             läggTillKategori(enKategori);
             
