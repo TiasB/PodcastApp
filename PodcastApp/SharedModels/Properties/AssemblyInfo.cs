@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SharedModels")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Atea")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("SharedModels")]
-[assembly: AssemblyCopyright("Copyright © Atea 2019")]
+[assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("db999d0f-7a72-4c95-95f5-844e27335bff")]
+[assembly: Guid("b0d86c29-ff52-49d9-a56d-63ec2cbb3795")]
 
 // Version information for an assembly consists of the following four values:
 //

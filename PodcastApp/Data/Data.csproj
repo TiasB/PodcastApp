@@ -47,12 +47,13 @@
   <ItemGroup>
     <Compile Include="Data.cs" />
     <Compile Include="Exceptions\SerializerExceptions.cs" />
+    <Compile Include="Interfaces\IHasAName.cs" />
     <Compile Include="Interfaces\ISaveable.cs" />
     <Compile Include="Interfaces\ISerializable.cs" />
-    <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\Media.cs" />
-    <Compile Include="Models\Episode.cs" />
-    <Compile Include="Models\PodcastShow.cs" />
+    <Compile Include="models\Category.cs" />
+    <Compile Include="models\Media.cs" />
+    <Compile Include="models\Episode.cs" />
+    <Compile Include="models\PodcastShow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SerializedReaderWriter.cs" />
     <Compile Include="Services\DataService.cs" />
