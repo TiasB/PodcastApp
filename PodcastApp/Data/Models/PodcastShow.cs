@@ -19,11 +19,9 @@ namespace SharedModels
         public string Category { get; set; }
 
 
-        public PodcastShow(string title, string url, string desc, string cat)
+        public PodcastShow(string url, string cat)
         {
-            this.Title = title;
             this.Url = url;
-            this.Description = desc;
             this.Category = cat;
 
 

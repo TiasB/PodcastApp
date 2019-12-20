@@ -22,6 +22,7 @@ namespace Logic
         {
             allaKategorier = new List<Category>();
             SerDeser = new SerializedReaderWriter();
+            Podcasts = new List<PodcastShow>();
 
         }
 
@@ -39,15 +40,15 @@ namespace Logic
         {
             SerDeser.SerializeCategory(allaKategorier);
         }
-        public void nyPodcast(string titel, string category, string url, string desc)
+        public void nyPodcast(string category, string url)
         {
-            PodcastShow newPodcast = new PodcastShow(url, category, titel, desc);
+            PodcastShow newPodcast = new PodcastShow(url, category);
             addNyPodcastToList(newPodcast);
         }
 
-        private void addNyPodcastToList(PodcastShow nyPodcast)
+        private void addNyPodcastToList(PodcastShow newPodcast)
         {
-            Podcasts.Add(nyPodcast);
+            Podcasts.Add(newPodcast);
         }
         private List<PodcastShow> getPodcastListByName(string name)
         {
