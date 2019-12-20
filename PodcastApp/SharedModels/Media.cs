@@ -7,7 +7,13 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public class Media : IHasAName  //tjena fan
+    public class Media : IHasAName
     {
+        public string Name { get; set; }
+        protected virtual int getCountOfList()
+        {
+            int count = 0;
+            return count;
+        }
     }
 }
