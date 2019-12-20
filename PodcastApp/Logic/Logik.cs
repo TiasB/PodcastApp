@@ -26,7 +26,7 @@ namespace Logic
         }
 
         public void nyKategori(string Kategorinamn)
-        {:
+        {
             Category enKategori = new Category(Kategorinamn);
             läggTillKategori(enKategori);
             
