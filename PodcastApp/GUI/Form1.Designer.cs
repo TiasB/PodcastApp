@@ -30,7 +30,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.lblHeader = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnNy1 = new System.Windows.Forms.Button();
@@ -82,7 +82,7 @@ namespace GUI
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(64, 30);
             this.listBox1.TabIndex = 1;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+      
             // 
             // btnNy1
             // 
@@ -115,7 +115,7 @@ namespace GUI
             this.btnTaBort1.TabIndex = 4;
             this.btnTaBort1.Text = "Ta bort";
             this.btnTaBort1.UseVisualStyleBackColor = true;
-            this.btnTaBort1.Click += new System.EventHandler(this.btnTaBort1_Click);
+         
             // 
             // cboUppdateringsfrekverns
             // 
@@ -150,7 +150,7 @@ namespace GUI
             this.txtURL.Size = new System.Drawing.Size(157, 20);
             this.txtURL.TabIndex = 8;
             this.txtURL.Text = "http://tuttobalutto.libsyn.com/rss";
-            this.txtURL.TextChanged += new System.EventHandler(this.txtURL_TextChanged);
+         
             // 
             // label2
             // 
@@ -276,7 +276,7 @@ namespace GUI
             this.btnCreateCategory.TabIndex = 20;
             this.btnCreateCategory.Text = "Create";
             this.btnCreateCategory.UseVisualStyleBackColor = true;
-            this.btnCreateCategory.Click += new System.EventHandler(this.button2_Click);
+ 
             // 
             // lvPodcastShow
             // 
@@ -287,7 +287,7 @@ namespace GUI
             this.Category});
             this.lvPodcastShow.HideSelection = false;
             this.lvPodcastShow.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.lvPodcastShow.Location = new System.Drawing.Point(9, 37);
             this.lvPodcastShow.Margin = new System.Windows.Forms.Padding(2);
             this.lvPodcastShow.Name = "lvPodcastShow";
@@ -295,7 +295,7 @@ namespace GUI
             this.lvPodcastShow.TabIndex = 21;
             this.lvPodcastShow.UseCompatibleStateImageBehavior = false;
             this.lvPodcastShow.View = System.Windows.Forms.View.Details;
-            this.lvPodcastShow.SelectedIndexChanged += new System.EventHandler(this.lvPodcastShow_SelectedIndexChanged);
+          
             // 
             // PodcastShow
             // 
